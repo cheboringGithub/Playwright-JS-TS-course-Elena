@@ -4,7 +4,7 @@
 
 ### Занятие 1
 **Теория:**
-- Тема 1: Node.js & NPM
+- Тема 1: Node.js, NPM и Yarn
 - Тема 2: Git & Git Flow
 
 ---
