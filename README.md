@@ -1,4 +1,4 @@
-## 📋 [Входное интервью](https://docs.google.com/spreadsheets/d/1tCCXvsZdnVEX9t_DtAmzbv3sevNBlCTX/edit?gid=1329734940#gid=1329734940)
+## 📋 [Входное интервью](https://docs.google.com/spreadsheets/d/1411PVFwE-m8fUYrKlUYjPOzasjRqaVIy/edit?gid=1329734940#gid=1329734940)
 
 ## 📚 План занятий
 
@@ -6,12 +6,6 @@
 **Теория:**
 - Тема 1: Node.js & NPM
 - Тема 2: Git & Git Flow
-
-**Практика:**
-- Создаем новый репозиторий
-- В ветке, отколотой от `main`, инициализируем Playwright-проект
-- Добавляем `README.md` и `.gitignore`
-- Делаем merge request в `main` (добавляем меня в ревьюеры — я аппрувлю и мержу)
 
 ---
 
@@ -21,14 +15,6 @@
 - Тема 2: Locators
 - Тема 3: Waiters
 
-**Практика:**
-- Создаем первые тесты (предварительно согласуем System Under Test)
-- Без абстракций и Page Object'ов
-- Merge request в `main` (ревью от меня)
-- Упражнения: CSS selectors, XPath
-- Упражнения на ожидания (явные, неявные, fluent)
-- Таймауты в тестах
-
 ---
 
 ### Занятие 3
@@ -37,11 +23,6 @@
 - Loggers, Reporters
 - Fixtures
 
-**Практика:**
-- Архитектура: Page Objects, Page Elements, Helpers
-- Кастомизация логгера и репортера
-- Создание и настройка фикстур
-
 ---
 
 ### Занятие 4
@@ -49,37 +30,20 @@
 - CI/CD
 - Docker (Virtualization vs Containerization)
 
-**Практика:**
-- Запуск тестов в pipeline (на MR и по расписанию)
-- Dockerfile для тестов (на базе стандартных образов)
-
 ---
 
 ### Занятие 5
 **Тема:** API Testing
-
-**Практика:**
-- API-запросы в тестах
-- Request interception
-- Network manipulation
-- JSON validation
 
 ---
 
 ### Занятие 6
 **Тема:** Software Engineering Practices
 
-**Практика:**
-- Принципы ООП в JS/TS
-- Паттерны проектирования в JS/TS
-
 ---
 
 ### Занятие 7
 **Тема:** TypeScript / JavaScript
-
-**Практика:**
-- Live coding
 
 ---
 

@@ -5,7 +5,7 @@ title: Главная
 
 # Playwright JS/TS Course
 
-[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md)
+[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md)
 
 ---
 
@@ -23,22 +23,6 @@ title: Главная
 - В ветке, отколотой от `main`, инициализируем Playwright-проект
 - Добавляем `README.md` и `.gitignore`
 - Делаем merge request в `main` (добавляем меня в ревьюеры — я аппрувлю и мержу)
-
----
-
-### Занятие 2
-**Теория:**
-- Тема 1: Automation Testing Framework (Playwright)
-- Тема 2: Locators
-- Тема 3: Waiters
-
-**Практика:**
-- Создаем первые тесты (предварительно согласуем System Under Test)
-- Без абстракций и Page Object'ов
-- Merge request в `main` (ревью от меня)
-- Упражнения: CSS selectors, XPath
-- Упражнения на ожидания (явные, неявные, fluent)
-- Таймауты в тестах
 
 ---
 
