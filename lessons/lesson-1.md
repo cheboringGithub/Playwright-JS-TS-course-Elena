@@ -66,3 +66,9 @@ title: Занятие 1
 ## Тема 3: Основы ЯП (JavaScript)
 
 Читаем раздел: [Первые шаги в JavaScript](https://learn.javascript.ru/first-steps) 
+
+---
+
+## Практика: Live Coding
+
+[Перейти к задачам для практики (Live Coding)](live-coding.md) 
