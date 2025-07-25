@@ -18,9 +18,9 @@ title: Live Coding Practice
 
 Ответы на задачи:
 
-- [Ответ к задаче 1.1](answers/lesson-1-task-1-1-hoisting.answer.md)
-- [Ответ к задаче 1.2](answers/lesson-1-task-1-2-let-redeclare.answer.md)
-- [Ответ к задаче 2.1](answers/lesson-1-task-2-1-primitive-copy.answer.md)
-- [Ответ к задаче 2.2](answers/lesson-1-task-2-2-object-copy.answer.md)
-- [Ответ к задаче 3.1](answers/lesson-1-task-3-1-arrow-this.answer.md)
-- [Ответ к задаче 3.2](answers/lesson-1-task-3-2-regular-this.answer.md)
+- [Ответ к задаче 1.1]({{ site.baseurl }}/lessons/live-coding/answers/lesson-1-task-1-1-hoisting.answer)
+- [Ответ к задаче 1.2]({{ site.baseurl }}/lessons/live-coding/answers/lesson-1-task-1-2-let-redeclare.answer)
+- [Ответ к задаче 2.1]({{ site.baseurl }}/lessons/live-coding/answers/lesson-1-task-2-1-primitive-copy.answer)
+- [Ответ к задаче 2.2]({{ site.baseurl }}/lessons/live-coding/answers/lesson-1-task-2-2-object-copy.answer)
+- [Ответ к задаче 3.1]({{ site.baseurl }}/lessons/live-coding/answers/lesson-1-task-3-1-arrow-this.answer)
+- [Ответ к задаче 3.2]({{ site.baseurl }}/lessons/live-coding/answers/lesson-1-task-3-2-regular-this.answer)
