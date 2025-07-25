@@ -1,15 +1,11 @@
-// lesson-1-live-coding-task-1-1-hoisting.js
+// lesson-1-task-1-1-hoisting.js
 
-/**
- * Задача: Что выведет код?
- *
- * function testVar() {
- *   console.log(a); // ?
- *   var a = 10;
- * }
- * testVar();
- *
- * Напишите ваш ответ ниже:
- */
+// Что выведет код?
+function testVar() {
+  console.log(a); // ?
+  var a = 10;
+}
+testVar();
 
-// Ваш ответ: 
+// Ваш ответ: (напишите комментарий ниже)
+// undefined 

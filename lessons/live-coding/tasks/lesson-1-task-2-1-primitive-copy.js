@@ -1,14 +1,10 @@
-// lesson-1-live-coding-task-2-1-primitive-copy.js
+// lesson-1-task-2-1-primitive-copy.js
 
-/**
- * Задача: Что выведет код?
- *
- * let a = 5;
- * let b = a;
- * b = 10;
- * console.log(a); // ?
- *
- * Напишите ваш ответ ниже:
- */
+// Что выведет код?
+let a = 5;
+let b = a;
+b = 10;
+console.log(a); // ?
 
-// Ваш ответ: 
+// Ваш ответ: (напишите комментарий ниже)
+// 5 
