@@ -94,4 +94,4 @@ title: Занятие 2
 
 ## Практика: Live Coding
 
-[Перейти к задачам для практики (Live Coding)](../live-coding/lesson-2/live-coding.md) 
+[Перейти к задачам для практики (Live Coding)]({{ site.baseurl }}/lessons/live-coding/lesson-2/live-coding) 
