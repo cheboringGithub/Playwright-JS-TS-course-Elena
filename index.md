@@ -2,7 +2,7 @@
 layout: default
 title: Главная
 ---
-<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
 
 # Playwright JS/TS Course
 
