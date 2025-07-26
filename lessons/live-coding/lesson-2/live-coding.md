@@ -1,12 +1,12 @@
 # Практика Live Coding (Lesson 2)
 
-Решайте задачи онлайн:
+Решайте задачи онлайн в песочнице:
 
-- [Задача 2.1: Чётные числа (filter)](tasks/lesson-2-task-1-1-array-filter.js)
-- [Задача 2.2: Ключи объекта (Object.keys)](tasks/lesson-2-task-1-2-object-keys.js)
-- [Задача 2.3: Квадраты элементов (map)](tasks/lesson-2-task-1-3-array-map.js)
-- [Задача 2.4: Значения объекта (Object.values)](tasks/lesson-2-task-1-4-object-values.js)
-- [Задача 2.5: Сумма элементов массива (reduce)](tasks/lesson-2-task-1-5-array-reduce.js)
+- [Задача 2.1: Чётные числа (filter) (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-2%2Ftasks%2Flesson-2-task-1-1-array-filter.js)
+- [Задача 2.2: Ключи объекта (Object.keys) (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-2%2Ftasks%2Flesson-2-task-1-2-object-keys.js)
+- [Задача 2.3: Квадраты элементов (map) (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-2%2Ftasks%2Flesson-2-task-1-3-array-map.js)
+- [Задача 2.4: Значения объекта (Object.values) (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-2%2Ftasks%2Flesson-2-task-1-4-object-values.js)
+- [Задача 2.5: Сумма элементов массива (reduce) (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-2%2Ftasks%2Flesson-2-task-1-5-array-reduce.js)
 
 Ответы на задачи:
 
