@@ -11,9 +11,9 @@
 
 ### Занятие 2
 **Теория:**
-- Тема 1: Automation Testing Framework (Playwright)
-- Тема 2: Locators
-- Тема 3: Waiters
+- Тема 1: Framework Architecture (Multilayered)
+- Тема 2: Loggers, Reporters
+- Тема 3: Fixtures
 
 ---
 

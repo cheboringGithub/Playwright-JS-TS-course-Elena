@@ -5,7 +5,7 @@ title: Главная
 
 # Playwright JS/TS Course
 
-[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md)
+[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md)
 
 ---
 
@@ -22,9 +22,9 @@ title: Главная
 
 ### Занятие 2
 **Теория:**
-- Тема 1: Automation Testing Framework (Playwright)
-- Тема 2: Locators
-- Тема 3: Waiters
+- Тема 1: Framework Architecture (Multilayered)
+- Тема 2: Loggers, Reporters
+- Тема 3: Fixtures
 
 ---
 
