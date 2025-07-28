@@ -6,13 +6,13 @@ title: Главная
 
 # Playwright JS/TS Course
 
-## :octocat: [Тестовый проект](https://github.com/elorish/auto_elo)
+## 📋 [Входное интервью](https://docs.google.com/spreadsheets/d/1411PVFwE-m8fUYrKlUYjPOzasjRqaVIy/edit?gid=1329734940#gid=1329734940)
+
+## <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo" style="height:1em;vertical-align:middle;"> [Тестовый проект](https://github.com/elorish/auto_elo)
 
 [Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md)
 
 ---
-
-## 📋 [Входное интервью](https://docs.google.com/spreadsheets/d/1411PVFwE-m8fUYrKlUYjPOzasjRqaVIy/edit?gid=1329734940#gid=1329734940)
 
 ## 📚 План занятий
 
