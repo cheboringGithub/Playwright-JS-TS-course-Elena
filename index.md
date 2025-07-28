@@ -6,7 +6,7 @@ title: Главная
 
 # Playwright JS/TS Course
 
-## 🚀 [Тестовый проект: auto_elo](https://github.com/elorish/auto_elo)
+## :octocat: [Тестовый проект](https://github.com/elorish/auto_elo)
 
 [Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md)
 
