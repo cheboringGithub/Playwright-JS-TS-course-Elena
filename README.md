@@ -1,6 +1,6 @@
 # Playwright JS/TS Course
 
-**Тестовый проект:** [auto_elo](https://github.com/elorish/auto_elo)
+## 🚀 [Тестовый проект: auto_elo](https://github.com/elorish/auto_elo)
 
 ## 📋 [Входное интервью](https://docs.google.com/spreadsheets/d/1411PVFwE-m8fUYrKlUYjPOzasjRqaVIy/edit?gid=1329734940#gid=1329734940)
 
