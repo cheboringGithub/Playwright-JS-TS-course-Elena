@@ -22,10 +22,10 @@
 ---
 
 ### Занятие 3
-**Теория:**
-- Framework Architecture (Multilayered, PageObject, PageElements, Functional Helpers)
-- Loggers, Reporters
-- Fixtures
+**Практика:**
+- Чётные числа (filter)
+- Ключи объекта (Object.keys)
+- Квадраты элементов (map)
 
 ---
 
