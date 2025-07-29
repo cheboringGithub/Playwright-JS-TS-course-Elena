@@ -17,25 +17,22 @@ title: Главная
 ## 📚 План занятий
 
 ### Занятие 1
-**Теория:**
-- Тема 1: Node.js, NPM и Yarn
-- Тема 2: Git & Git Flow
+- Тема 1: Node.js & NPM, Yarn
+- Тема 2: GIT & GIT Flow
+- Тема 3: Основы ЯП (JavaScript)
 
 ---
 
 ### Занятие 2
-**Теория:**
-- Тема 1: Framework Architecture (Multilayered)
-- Тема 2: Loggers, Reporters
-- Тема 3: Fixtures
+- Тема 1: Методы объектов и массивов
 
 ---
 
 ### Занятие 3
-**Практика:**
-- Чётные числа (filter)
-- Ключи объекта (Object.keys)
-- Квадраты элементов (map)
+- Тема 1: Framework Architecture (Multilayered)
+- Тема 2: Loggers, Reporters
+- Тема 3: Fixtures
+- Практическая часть: автоматизация тестов
 
 ---
 
