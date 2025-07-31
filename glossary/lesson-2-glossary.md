@@ -380,6 +380,103 @@ console.log(person.getName()); // "Jane"
 
 ---
 
+## Hoisting
+
+**Hoisting** — механизм JavaScript, при котором объявления переменных и функций "поднимаются" наверх их области видимости.
+
+**Что поднимается:**
+- Объявления `var` переменных (но не присваивания)
+- Объявления функций (`function declaration`)
+- Объявления `let` и `const` (но не инициализируются)
+
+**Примеры с var:**
+```javascript
+console.log(x); // undefined (не ошибка!)
+var x = 5;
+
+// Интерпретируется как:
+var x;
+console.log(x); // undefined
+x = 5;
+```
+
+**Примеры с функциями:**
+```javascript
+// Это работает благодаря hoisting
+sayHello(); // "Hello!"
+
+function sayHello() {
+  console.log("Hello!");
+}
+
+// Но это не работает (function expression)
+sayBye(); // TypeError: sayBye is not a function
+var sayBye = function() {
+  console.log("Bye!");
+};
+```
+
+**С let и const:**
+```javascript
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+
+// Temporal Dead Zone - переменная объявлена, но не доступна
+```
+
+---
+
+## E2E тестирование
+
+**E2E (End-to-End) тестирование** — тип тестирования, который проверяет работу приложения полностью, от начала до конца пользовательского сценария.
+
+**Характеристики E2E тестов:**
+- Тестируют полный пользовательский путь
+- Включают взаимодействие с UI, API, базой данных
+- Запускаются в реальной или близкой к реальной среде
+- Имитируют действия реального пользователя
+
+**Примеры E2E сценариев:**
+- Регистрация → Логин → Покупка товара → Оплата
+- Создание аккаунта → Заполнение профиля → Публикация контента
+- Поиск товара → Добавление в корзину → Оформление заказа
+
+**Инструменты для E2E:**
+- **Playwright** — современный фреймворк
+- **Cypress** — популярный инструмент
+- **Selenium** — классический выбор
+- **WebDriver** — стандарт автоматизации
+
+**Пример E2E теста:**
+```javascript
+test('complete shopping flow', async ({ page }) => {
+  // 1. Открыть сайт
+  await page.goto('/shop');
+  
+  // 2. Найти товар
+  await page.fill('[data-testid="search"]', 'laptop');
+  await page.click('[data-testid="search-button"]');
+  
+  // 3. Добавить в корзину
+  await page.click('[data-testid="add-to-cart"]');
+  
+  // 4. Перейти к оформлению
+  await page.click('[data-testid="checkout"]');
+  
+  // 5. Заполнить данные
+  await page.fill('[data-testid="email"]', 'user@example.com');
+  await page.fill('[data-testid="address"]', '123 Main St');
+  
+  // 6. Оплатить
+  await page.click('[data-testid="pay-button"]');
+  
+  // 7. Проверить успех
+  await expect(page.locator('[data-testid="success"]')).toBeVisible();
+});
+```
+
+---
+
 ## var (устаревшее ключевое слово)
 
 **var** — устаревший способ объявления переменных в JavaScript (до ES6).

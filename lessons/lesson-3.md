@@ -13,31 +13,20 @@ title: Занятие 3
 
 ## Тема 1: Framework Architecture (Multilayered)
 
-**Вопросы для обсуждения:**
-- Что такое [**фреймворк для автоматизированного тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#фреймворк-для-автоматизированного-тестирования){:data-glossary-term="Фреймворк тестирования" data-glossary-definition="Платформа для создания автоматизированных тестов"} (и в чем отличие от того, что называют фреймворком разработчики)?
-- Какие основные [**инструменты для автоматизации тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#инструменты-для-автоматизации-тестирования){:data-glossary-term="Инструменты тестирования" data-glossary-definition="Playwright, Selenium, Cypress и др."} существуют сейчас на рынке (их особенности и различия)?
-- Какие [**критерии выбора инструмента**]({{ site.baseurl }}/glossary/lesson-3-glossary#критерии-выбора-инструмента){:data-glossary-term="Критерии выбора" data-glossary-definition="Параметры для выбора фреймворка тестирования"} существуют?
-- Из каких **слоев (уровней)** может состоять [**фреймворк**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура)?
-- Какие **паттерны** применяют для разных [**уровней абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в фреймворке и в особенности какие паттерны применяют для уровня бизнес-логики ([**PageObject**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern), [**PageElements**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-elements), [**Functional Helpers**]({{ site.baseurl }}/glossary/lesson-3-glossary#functional-helpers))?
-
-**Ключевые концепции:**
-- [**Многослойная архитектура**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) фреймворка
-- [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern){:data-glossary-term="Page Object Pattern" data-glossary-definition="Класс для страницы с ее элементами и методами"} и его вариации
-- [**Уровни абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в автоматизации тестирования
+- [**Фреймворк тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#фреймворк-для-автоматизированного-тестирования){:data-glossary-term="Фреймворк тестирования" data-glossary-definition="Платформа для создания автоматизированных тестов"} vs фреймворк разработки — отличия
+- [**Инструменты автоматизации**]({{ site.baseurl }}/glossary/lesson-3-glossary#инструменты-для-автоматизации-тестирования){:data-glossary-term="Инструменты тестирования" data-glossary-definition="Playwright, Selenium, Cypress и др."} — обзор рынка и особенности
+- [**Критерии выбора**]({{ site.baseurl }}/glossary/lesson-3-glossary#критерии-выбора-инструмента){:data-glossary-term="Критерии выбора" data-glossary-definition="Параметры для выбора фреймворка тестирования"} инструмента тестирования
+- [**Многослойная архитектура**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) — структура и слои фреймворка
+- [**Паттерны проектирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции): [**Page Object**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern){:data-glossary-term="Page Object Pattern" data-glossary-definition="Класс для страницы с ее элементами и методами"}, [**Page Elements**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-elements), [**Functional Helpers**]({{ site.baseurl }}/glossary/lesson-3-glossary#functional-helpers)
 
 ---
 
 ## Тема 2: Loggers, Reporters
 
-**Вопросы для обсуждения:**
-- Что такое [**репортеры**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры){:data-glossary-term="Репортеры" data-glossary-definition="Модули для создания отчетов о тестах"} и для чего они нужны?
-- Какие существуют [**репортеры в Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры) и как они подключаются?
-- Как сделать [**кастомный репортер**]({{ site.baseurl }}/glossary/lesson-3-glossary#кастомный-репортер) и для чего он может быть полезен?
-
-**Ключевые концепции:**
-- [**Логирование**]({{ site.baseurl }}/glossary/lesson-3-glossary#логирование) в автоматизированных тестах
-- **Отчетность** и её важность
-- [**Кастомизация**]({{ site.baseurl }}/glossary/lesson-3-glossary#кастомный-репортер) репортеров
+- [**Репортеры**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры){:data-glossary-term="Репортеры" data-glossary-definition="Модули для создания отчетов о тестах"} — назначение и типы
+- [**Встроенные репортеры Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры) — подключение и настройка
+- [**Кастомные репортеры**]({{ site.baseurl }}/glossary/lesson-3-glossary#кастомный-репортер) — создание и применение
+- [**Логирование**]({{ site.baseurl }}/glossary/lesson-3-glossary#логирование) — отладка и мониторинг тестов
 
 **Рекомендуемые материалы:**
 - [Документация Playwright по репортерам](https://playwright.dev/docs/test-reporters)
@@ -46,16 +35,10 @@ title: Занятие 3
 
 ## Тема 3: Fixtures
 
-**Вопросы для обсуждения:**
-- Что такое [**фикстуры**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры){:data-glossary-term="Фикстуры" data-glossary-definition="Подготовка данных для тестов (setup/teardown)"} и для чего они нужны в автоматизированном тестировании?
-- Какие **проблемы решают фикстуры** и как они улучшают качество тестов?
-- Как работают [**setup и teardown**]({{ site.baseurl }}/glossary/lesson-3-glossary#setup-и-teardown) в контексте фикстур?
-- Какие бывают типы [**фикстур в Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры) — **test fixtures**, **worker fixtures**, **auto fixtures** — и чем они отличаются друг от друга?
-
-**Ключевые концепции:**
-- [**Setup и Teardown**]({{ site.baseurl }}/glossary/lesson-3-glossary#setup-и-teardown) в тестах
-- **Переиспользование** кода между тестами
-- **Изоляция** тестовых данных
+- [**Фикстуры**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры){:data-glossary-term="Фикстуры" data-glossary-definition="Подготовка данных для тестов (setup/teardown)"} — подготовка данных и решаемые проблемы
+- [**Setup/Teardown**]({{ site.baseurl }}/glossary/lesson-3-glossary#setup-и-teardown) — жизненный цикл тестовых данных
+- **Типы фикстур**: [**test fixtures**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры), **worker fixtures**, **auto fixtures** — различия и применение
+- **Переиспользование кода** и **изоляция данных** между тестами
 
 **Рекомендуемые материалы:**
 - [Документация Playwright по фикстурам](https://playwright.dev/docs/test-fixtures) 
@@ -71,71 +54,51 @@ title: Занятие 3
 
 > **Примечание:** Все задания выполняй без создания абстракций и Page Object'ов — это будет рассмотрено в следующих занятиях.
 
-### Тест-кейс 1: Позитивный сценарий логина
-**Цель:** Проверить успешный вход с валидными данными
+### Тест-кейс 1: Позитивный логин
+**Проверка успешной авторизации**
+1. Открыть [тестовую страницу](https://www.saucedemo.com/)
+2. Ввести данные: `standard_user` / `secret_sauce`
+3. Нажать `Login`
+4. Проверить переход на страницу **Products**
 
-**Шаги:**
-1. Перейдите на [https://www.saucedemo.com/](https://www.saucedemo.com/)
-2. Введите логин: `standard_user`
-3. Введите пароль: `secret_sauce`
-4. Нажмите кнопку `Login`
-5. Убедитесь, что открылась страница **Products** (отображается заголовок "Products")
+### Тест-кейс 2: Негативный логин
+**Проверка обработки ошибок авторизации**
+1. Открыть [https://www.saucedemo.com/](https://www.saucedemo.com/)
+2. Ввести неверные данные: `wrong_user` / `wrong_pass`
+3. Нажать `Login`
+4. Проверить появление сообщения об ошибке
 
----
+### Тест-кейс 3: Добавление в корзину
+**Проверка функции добавления товаров**
+1. Авторизация (`standard_user` / `secret_sauce`)
+2. Выбрать товар → `Add to cart`
+3. Перейти в корзину (иконка в углу)
+4. Проверить наличие товара в корзине
 
-### Тест-кейс 2: Негативный сценарий логина
-**Цель:** Проверить ошибку при вводе неверных данных
+### Тест-кейс 4: Оформление заказа
+**Проверка полного цикла покупки**
+1. Авторизация + добавление товара (шаги выше)
+2. Корзина → `Checkout`
+3. Заполнить форму контактов (любые валидные данные)
+4. `Continue` → `Finish`
+5. Проверить сообщение "THANK YOU FOR YOUR ORDER"
 
-**Шаги:**
-1. Перейдите на [https://www.saucedemo.com/](https://www.saucedemo.com/)
-2. Введите невалидный логин и/или пароль (например, `wrong_user` / `wrong_pass`)
-3. Нажмите кнопку `Login`
-4. Убедитесь, что появляется сообщение об ошибке (**Error message**)
-
----
-
-### Тест-кейс 3: Добавление товара в корзину
-**Цель:** Проверить добавление товара в корзину
-
-**Шаги:**
-1. Залогиниться как `standard_user` / `secret_sauce`
-2. На странице товаров нажать `Add to cart` у любого товара
-3. Перейти в корзину (иконка корзины в правом верхнем углу)
-4. Убедиться, что выбранный товар отображается в корзине
-
----
-
-### Тест-кейс 4: Оформление заказа (checkout flow)
-**Цель:** Проверить успешное оформление заказа
-
-**Шаги:**
-1. Залогиниться как `standard_user` / `secret_sauce`
-2. Добавить товар в корзину
-3. Перейти в корзину и нажать `Checkout`
-4. Заполнить форму: First Name, Last Name, Zip/Postal Code (любые валидные значения)
-5. Нажать `Continue`, затем `Finish`
-6. Убедиться, что отображается сообщение "THANK YOU FOR YOUR ORDER"
+### Тест-кейс 5: Сортировка товаров
+**Проверка фильтрации по цене**
+1. Авторизация (см. выше)
+2. Выбрать сортировку `Price (low to high)`
+3. Проверить порядок цен по возрастанию
 
 ---
 
-### Тест-кейс 5: Проверка фильтрации товаров
-**Цель:** Проверить сортировку товаров по цене (от меньшей к большей)
+**API [Playwright]({{ site.baseurl }}/glossary/lesson-2-glossary#playwright):**
+- [`page.goto`](https://playwright.dev/docs/api/class-page#page-goto) — навигация
+- [`page.fill`](https://playwright.dev/docs/api/class-page#page-fill) — ввод текста  
+- [`page.click`](https://playwright.dev/docs/api/class-page#page-click) — клики
+- [`page.locator`](https://playwright.dev/docs/api/class-page#page-locator) — [**поиск элементов**]({{ site.baseurl }}/glossary/lesson-3-glossary#селектор){:data-glossary-term="Локаторы" data-glossary-definition="Способы поиска элементов на странице: CSS, XPath, text"}
+- [`expect`](https://playwright.dev/docs/api/class-expect) — [**проверки**]({{ site.baseurl }}/glossary/lesson-3-glossary#assertions){:data-glossary-term="Assertions" data-glossary-definition="Проверки ожидаемых результатов в тестах"}
 
-**Шаги:**
-1. Залогиниться как `standard_user` / `secret_sauce`
-2. На странице товаров выбрать сортировку `Price (low to high)`
-3. Убедиться, что товары отсортированы по цене по возрастанию
-
----
-
-**Полезные методы [Playwright]({{ site.baseurl }}/glossary/lesson-2-glossary#playwright):**
-- [`page.goto`](https://playwright.dev/docs/api/class-page#page-goto) — переход по URL
-- [`page.fill`](https://playwright.dev/docs/api/class-page#page-fill) — ввод текста в поле
-- [`page.click`](https://playwright.dev/docs/api/class-page#page-click) — клик по элементу
-- [`page.locator`](https://playwright.dev/docs/api/class-page#page-locator) — поиск элементов ([**селекторы**]({{ site.baseurl }}/glossary/lesson-3-glossary#селектор))
-- [`expect`](https://playwright.dev/docs/api/class-expect) — проверки/[**assertions**]({{ site.baseurl }}/glossary/lesson-3-glossary#assertions){:data-glossary-term="Assertions" data-glossary-definition="Проверки ожидаемых результатов в тестах"}
-
-**Пример псевдокода для Playwright (TypeScript):**
+**Пример [псевдокода]({{ site.baseurl }}/glossary/lesson-3-glossary#псевдокод){:data-glossary-term="Псевдокод" data-glossary-definition="Упрощенный код для демонстрации логики"} для Playwright ([TypeScript]({{ site.baseurl }}/glossary/lesson-3-glossary#typescript){:data-glossary-term="TypeScript" data-glossary-definition="Типизированный JavaScript от Microsoft"}):**
 ```ts
 import { test, expect } from '@playwright/test';
 

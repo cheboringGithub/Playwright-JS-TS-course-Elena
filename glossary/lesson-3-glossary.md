@@ -516,6 +516,159 @@ test.afterAll(async () => {
 
 ---
 
+## URL
+
+**URL (Uniform Resource Locator)** — универсальный указатель ресурса, стандартизированный адрес для идентификации веб-ресурсов.
+
+**Структура URL:**
+```
+https://example.com:443/path/to/page?param1=value1&param2=value2#section
+│─────┤ │─────────┤│─┤ │─────────┤ │─────────────────────────────┤ │─────┤
+│     │ │         ││ │ │         │ │                             │ │     │
+│     │ │         ││ │ │         │ │        Query String         │ │     │
+│     │ │         ││ │ │         │ └─────────────────────────────┘ │     │
+│     │ │         ││ │ │         │                                │     │
+│     │ │         ││ │ │         └── Path                         │     │
+│     │ │         ││ │ └────────────── Port                       │     │
+│     │ │         │└─┘                                           │     │
+│     │ │         └─── Host/Domain                                │     │
+│     │ └─────────────── Scheme/Protocol                         │     │
+│     └──────────────────────────────────────────────────────────┘     │
+                                                                      │     │
+                                                                      └─── Fragment
+```
+
+**Компоненты:**
+- **Protocol** — схема (http, https, ftp)
+- **Host** — доменное имя или IP-адрес
+- **Port** — порт (по умолчанию 80 для HTTP, 443 для HTTPS)
+- **Path** — путь к ресурсу
+- **Query** — параметры запроса
+- **Fragment** — якорь на странице
+
+**Примеры в автоматизации:**
+```javascript
+// Переход по URL
+await page.goto('https://example.com/login');
+
+// Проверка текущего URL
+await expect(page).toHaveURL('https://example.com/dashboard');
+
+// Проверка части URL
+await expect(page).toHaveURL(/.*dashboard.*/);
+```
+
+---
+
+## Псевдокод
+
+**Псевдокод** — упрощенная запись алгоритма или логики программы на естественном языке, смешанном с элементами программирования.
+
+**Характеристики псевдокода:**
+- Не привязан к конкретному языку программирования
+- Читается как обычный текст
+- Показывает логику без синтаксических деталей
+- Используется для планирования и документирования
+
+**Пример псевдокода для теста:**
+```
+НАЧАЛО тест "Логин пользователя"
+  1. Открыть страницу логина
+  2. Ввести имя пользователя "testuser"
+  3. Ввести пароль "password123"
+  4. Нажать кнопку "Войти"
+  5. ЕСЛИ появилась ошибка ТО
+       ПРОВАЛИТЬ тест с сообщением об ошибке
+     ИНАЧЕ
+       ПРОВЕРИТЬ, что открылась главная страница
+     КОНЕЦ ЕСЛИ
+КОНЕЦ теста
+```
+
+**Соответствующий код Playwright:**
+```javascript
+test('Логин пользователя', async ({ page }) => {
+  // 1. Открыть страницу логина
+  await page.goto('/login');
+  
+  // 2-3. Ввести данные
+  await page.fill('#username', 'testuser');
+  await page.fill('#password', 'password123');
+  
+  // 4. Нажать кнопку
+  await page.click('#login-button');
+  
+  // 5. Проверка
+  const errorMessage = page.locator('.error-message');
+  if (await errorMessage.isVisible()) {
+    throw new Error('Login failed: ' + await errorMessage.textContent());
+  } else {
+    await expect(page).toHaveURL('/dashboard');
+  }
+});
+```
+
+---
+
+## TypeScript
+
+**TypeScript** — типизированный язык программирования от Microsoft, надстройка над JavaScript, добавляющая статическую типизацию.
+
+**Основные возможности:**
+- Статическая типизация
+- Интерфейсы и классы
+- Современный синтаксис ES6+
+- Компиляция в JavaScript
+- Поддержка IDE с автодополнением
+
+**Преимущества в автоматизации тестов:**
+- Лучшая поддержка IDE
+- Раннее обнаружение ошибок
+- Улучшенная читаемость кода
+- Автодополнение методов и свойств
+
+**Пример теста на TypeScript:**
+```typescript
+import { test, expect, Page } from '@playwright/test';
+
+interface LoginCredentials {
+  username: string;
+  password: string;
+}
+
+class LoginPage {
+  constructor(private page: Page) {}
+
+  async login(credentials: LoginCredentials): Promise<void> {
+    await this.page.fill('#username', credentials.username);
+    await this.page.fill('#password', credentials.password);
+    await this.page.click('#login-button');
+  }
+
+  async getErrorMessage(): Promise<string | null> {
+    const errorElement = this.page.locator('.error-message');
+    return await errorElement.isVisible() 
+      ? await errorElement.textContent() 
+      : null;
+  }
+}
+
+test('successful login', async ({ page }: { page: Page }) => {
+  const loginPage = new LoginPage(page);
+  const credentials: LoginCredentials = {
+    username: 'testuser',
+    password: 'password123'
+  };
+
+  await page.goto('/login');
+  await loginPage.login(credentials);
+  
+  await expect(page).toHaveURL('/dashboard');
+});
+```
+
+---
+
 ## Селектор
 
 **Селектор** — строка, которая идентифицирует элемент(ы) на веб-странице для взаимодействия или проверки.

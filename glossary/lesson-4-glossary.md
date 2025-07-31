@@ -259,6 +259,232 @@ jobs:
 - **Dockerfile** — текстовый файл с инструкциями для создания образа
 - **Registry** — хранилище образов (Docker Hub)
 
+---
+
+## Контейнер
+
+**Контейнер** — изолированная среда выполнения приложения, которая включает код, среду выполнения, системные инструменты, библиотеки и настройки.
+
+**Характеристики контейнера:**
+- **Изоляция** — процессы изолированы от хост-системы
+- **Портативность** — работает одинаково везде
+- **Легковесность** — использует ресурсы эффективнее виртуальных машин
+- **Скорость** — быстрый запуск и остановка
+
+**Жизненный цикл контейнера:**
+```bash
+# Создание и запуск
+docker run -d --name my-app nginx
+
+# Просмотр запущенных контейнеров
+docker ps
+
+# Остановка
+docker stop my-app
+
+# Запуск существующего
+docker start my-app
+
+# Удаление
+docker rm my-app
+```
+
+**Использование в тестах:**
+```bash
+# Запуск тестов в контейнере
+docker run --rm -v $(pwd):/app -w /app playwright:latest npm test
+
+# Docker Compose для тестовой среды
+docker-compose up -d db
+docker-compose run tests npm run test:e2e
+```
+
+---
+
+## Окружение
+
+**Окружение (Environment)** — совокупность программных и аппаратных средств, конфигураций и настроек, в которых выполняется приложение или тесты.
+
+**Типы окружений:**
+- **Development (Dev)** — среда разработки
+- **Testing (Test)** — среда тестирования
+- **Staging (Stage)** — предпродакшн среда
+- **Production (Prod)** — боевая среда
+
+**Переменные окружения:**
+```bash
+# Установка переменных
+export NODE_ENV=production
+export DATABASE_URL=postgresql://user:pass@localhost/db
+
+# В тестах Playwright
+BROWSER=firefox npm test
+BASE_URL=https://staging.example.com npm test
+```
+
+**Конфигурация по окружениям:**
+```javascript
+// playwright.config.js
+const config = {
+  use: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
+  },
+  
+  projects: [
+    {
+      name: 'staging',
+      use: {
+        baseURL: 'https://staging.example.com'
+      }
+    },
+    {
+      name: 'production',
+      use: {
+        baseURL: 'https://example.com'
+      }
+    }
+  ]
+};
+```
+
+---
+
+## Docker образ
+
+**Docker образ (Image)** — неизменяемый шаблон, содержащий код приложения, среду выполнения, библиотеки, переменные окружения и конфигурационные файлы.
+
+**Характеристики образа:**
+- **Read-only** — неизменяемый после создания
+- **Слоистая структура** — состоит из слоев
+- **Переиспользование** — слои могут использоваться разными образами
+- **Версионирование** — имеет теги для версий
+
+**Команды для работы с образами:**
+```bash
+# Просмотр образов
+docker images
+
+# Создание образа из Dockerfile
+docker build -t my-app:1.0 .
+
+# Скачивание образа
+docker pull nginx:alpine
+
+# Удаление образа
+docker rmi my-app:1.0
+
+# Просмотр истории образа
+docker history my-app:1.0
+```
+
+**Пример многослойного образа:**
+```dockerfile
+FROM node:18-alpine          # Базовый слой
+WORKDIR /app                 # Слой с рабочей директорией
+COPY package*.json ./        # Слой с package.json
+RUN npm ci                   # Слой с зависимостями
+COPY . .                     # Слой с исходным кодом
+CMD ["npm", "start"]         # Метаданные команды
+```
+
+---
+
+## Git push
+
+**Git push** — команда для отправки локальных коммитов в удаленный репозиторий.
+
+**Основной синтаксис:**
+```bash
+git push [remote] [branch]
+```
+
+**Примеры использования:**
+```bash
+# Отправка текущей ветки в origin
+git push
+
+# Отправка конкретной ветки
+git push origin feature-branch
+
+# Отправка всех веток
+git push --all origin
+
+# Отправка тегов
+git push --tags
+
+# Принудительная отправка (осторожно!)
+git push --force origin feature-branch
+
+# Отправка в новую удаленную ветку
+git push -u origin new-feature
+```
+
+**В контексте CI/CD:**
+- Push в main/master запускает production pipeline
+- Push в develop запускает staging pipeline
+- Push в feature ветки запускает тесты
+
+**Настройка автоматического push:**
+```bash
+# Установка upstream для ветки
+git push -u origin feature-branch
+
+# Теперь можно просто делать
+git push
+```
+
+---
+
+## Git merge
+
+**Git merge** — команда для объединения изменений из одной ветки в другую.
+
+**Типы слияния:**
+
+**Fast-forward merge:**
+```bash
+# Простое перемещение указателя
+git checkout main
+git merge feature-branch
+```
+
+**3-way merge:**
+```bash
+# Создается merge commit
+git checkout main
+git merge feature-branch -m "Merge feature-branch into main"
+```
+
+**Merge с конфликтами:**
+```bash
+git merge feature-branch
+# Auto-merging file.txt
+# CONFLICT (content): Merge conflict in file.txt
+# Automatic merge failed; fix conflicts and then commit the result.
+
+# Разрешение конфликтов
+vim file.txt  # Редактируем файл
+git add file.txt
+git commit
+```
+
+**Merge strategies:**
+```bash
+# Recursive (по умолчанию)
+git merge -s recursive feature-branch
+
+# Ours - использовать нашу версию при конфликтах
+git merge -s ours feature-branch
+
+# Octopus - для слияния нескольких веток
+git merge -s octopus branch1 branch2
+```
+
+**В GitHub/GitLab:**
+- Merge Request/Pull Request
+- Автоматическое слияние после код-ревью
+- Защищенные ветки требуют проверок
+
 **Пример Dockerfile:**
 ```dockerfile
 # Базовый образ

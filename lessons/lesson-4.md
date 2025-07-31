@@ -13,37 +13,22 @@ title: Занятие 4
 
 ## Тема 1: CI/CD
 
-**Вопросы для обсуждения:**
-- Что такое [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd){:data-glossary-term="CI/CD" data-glossary-definition="Непрерывная интеграция и развертывание"} и зачем это нужно?
-- Какие основные **этапы** [**CI/CD pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline){:data-glossary-term="Pipeline" data-glossary-definition="Последовательность автоматизированных этапов"}?
-- Как **интегрировать автоматизацию тестирования** в [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd)?
-- Какие **инструменты** [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd) популярны сейчас?
-- Что такое [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions){:data-glossary-term="GitHub Actions" data-glossary-definition="CI/CD платформа от GitHub"} и как настроить [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow){:data-glossary-term="Workflow" data-glossary-definition="Набор автоматизированных шагов"}?
-- Как создать [**pipeline для автоматического запуска тестов**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline)?
-
-**Ключевые концепции:**
-- [**Continuous Integration**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-integration-ci){:data-glossary-term="Continuous Integration" data-glossary-definition="Непрерывная интеграция кода"} (CI)
-- [**Continuous Deployment**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-deployment-cd){:data-glossary-term="Continuous Deployment" data-glossary-definition="Непрерывное развертывание продукта"} (CD)
-- [**Pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline) и его этапы
-- **Интеграция тестов** в процесс разработки
-- [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions) и [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow)
-- **Автоматический запуск тестов** при push/merge
+- [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd){:data-glossary-term="CI/CD" data-glossary-definition="Непрерывная интеграция и развертывание"} — назначение и преимущества
+- [**Pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline){:data-glossary-term="Pipeline" data-glossary-definition="Последовательность автоматизированных этапов"} — основные этапы и структура
+- **Интеграция тестирования** в процесс разработки
+- **Популярные инструменты** — обзор рынка CI/CD решений
+- [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions){:data-glossary-term="GitHub Actions" data-glossary-definition="CI/CD платформа от GitHub"} — настройка [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow){:data-glossary-term="Workflow" data-glossary-definition="Набор автоматизированных шагов"}
+- **Автоматизация тестов** при [**push**]({{ site.baseurl }}/glossary/lesson-4-glossary#git-push){:data-glossary-term="Git push" data-glossary-definition="Отправка локальных изменений в удаленный репозиторий"}/[**merge**]({{ site.baseurl }}/glossary/lesson-4-glossary#git-merge){:data-glossary-term="Git merge" data-glossary-definition="Слияние веток в Git"}
 
 ---
 
-## Тема 2: Docker (Virtualization vs Containerization)
+## Тема 2: Docker и контейнеризация
 
-**Вопросы для обсуждения:**
-- Что такое [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker){:data-glossary-term="Docker" data-glossary-definition="Платформа для контейнеризации"} и зачем он нужен?
-- В чём разница между [**виртуализацией** и **контейнеризацией**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация)?
-- Как **запускать тесты в** [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker)?
-- Какие **преимущества** даёт использование контейнеров?
-
-**Ключевые концепции:**
-- [**Контейнеризация** vs **виртуализация**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация)
-- [**Dockerfile**]({{ site.baseurl }}/glossary/lesson-4-glossary#dockerfile){:data-glossary-term="Dockerfile" data-glossary-definition="Файл с инструкциями для создания Docker-образа"} и [**Docker Compose**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker-compose){:data-glossary-term="Docker Compose" data-glossary-definition="Инструмент для управления многоконтейнерными приложениями"}
-- **Изоляция** окружения
-- **Портативность** приложений
+- [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker){:data-glossary-term="Docker" data-glossary-definition="Платформа для контейнеризации"} — назначение и возможности
+- [**Контейнеризация vs виртуализация**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация) — сравнение подходов
+- **Запуск тестов** в [**контейнерах**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнер){:data-glossary-term="Контейнер" data-glossary-definition="Изолированная среда выполнения приложения"}
+- **Инструменты**: [**Dockerfile**]({{ site.baseurl }}/glossary/lesson-4-glossary#dockerfile){:data-glossary-term="Dockerfile" data-glossary-definition="Файл с инструкциями для создания Docker-образа"}, [**Docker Compose**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker-compose){:data-glossary-term="Docker Compose" data-glossary-definition="Инструмент для управления многоконтейнерными приложениями"}
+- **Преимущества**: изоляция [**окружений**]({{ site.baseurl }}/glossary/lesson-4-glossary#окружение){:data-glossary-term="Окружение" data-glossary-definition="Среда разработки/тестирования/продакшена"}, портативность [**образов**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker-образ){:data-glossary-term="Docker образ" data-glossary-definition="Шаблон для создания контейнеров"}
 
 ---
 
@@ -57,12 +42,12 @@ title: Занятие 4
 > Отправляй на ревью после каждого задания, я аппрувлю и только потом делай следующее.
 
 ### Задание 1: Page Object Pattern
-Реализуй абстракции к тестам, сделанным в занятии 3, применяя [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно).
+Реализуй абстракции к тестам из занятия 3, применяя [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно).
 
-**Что нужно сделать:**
-- Создай классы для страниц
-- Вынеси локаторы и методы взаимодействия с элементами в соответствующие классы
-- Перепиши тесты так, чтобы они использовали методы страниц вместо прямых локаторов
+**Задачи:**
+- Создание классов для страниц
+- Вынос локаторов и методов взаимодействия
+- Переписывание тестов с использованием методов страниц
 
 **Пример структуры:**
 ```js
@@ -90,15 +75,12 @@ test('login test', async ({ page }) => {
 ---
 
 ### Задание 2: Page Factory Pattern
-Реализуй [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern), которая будет возвращать страницы в тестах.
+Реализуй [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) — паттерн для централизованного создания объектов страниц в [**Playwright**]({{ site.baseurl }}/glossary/lesson-2-glossary#playwright).
 
-**Что такое** [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern)**:**
-[**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) — это паттерн, который создаёт и возвращает объекты страниц. В [**Playwright**]({{ site.baseurl }}/glossary/lesson-2-glossary#playwright) это позволяет централизованно управлять созданием страниц и упростить тесты.
-
-**Что нужно сделать:**
-- Создай класс PageFactory
-- Реализуй методы для получения всех страниц (getLoginPage, getProductsPage, etc.)
-- Перепиши тесты так, чтобы они получали страницы через фабрику
+**Задачи:**
+- Класс PageFactory с методами создания страниц  
+- Методы получения: `getLoginPage()`, `getProductsPage()`, etc.
+- Интеграция фабрики в тесты
 
 **Пример структуры:**
 ```js
@@ -127,11 +109,11 @@ test('test with factory', async ({ page }) => {
 ---
 
 ### Задание 3: Фикстуры с Page Factory
-Реализуй [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) теста, из которой можно будет вызвать [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern).
+Реализуй [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) для инициализации [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern).
 
-**Что нужно сделать:**
-- Создай [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно), которая инициализирует [**PageFactory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) с переданной страницей
-- Перепиши тесты так, чтобы они использовали [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) фабрики
+**Задачи:**
+- Фикстура с инициализацией PageFactory  
+- Интеграция фикстуры в тесты
 
 **Пример структуры:**
 ```js
@@ -159,10 +141,9 @@ test('test with factory fixture', async ({ pageFactory }) => {
 
 ---
 
-**Результат:**
-Твои тесты должны иметь:
-- [**Уровень абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) с бизнес-логикой ([**Page Objects**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно))
-- [**Фабрику**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern), которая возвращает страницы
-- [**Фикстуру фабрики**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно), из которой можно получить любую страницу
+**Итоговая архитектура:**
+- [**Page Objects**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно) — бизнес-логика страниц
+- [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) — централизованное создание страниц  
+- [**Фикстуры**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) — управление жизненным циклом
 
-Это создаст полноценную [**архитектуру автоматизации**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) с правильным разделением ответственности. 
+Результат — полноценная [**многослойная архитектура**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) с четким разделением ответственности. 
