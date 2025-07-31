@@ -11,7 +11,7 @@ function getObjectValues(obj) {
 ```
 
 **Пояснение:**
-[**Метод `Object.values`**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries) возвращает массив значений всех собственных перечисляемых свойств объекта.
+[**Метод `Object.values`**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries){:data-glossary-term="Object.values" data-glossary-definition="Возвращает массив значений объекта"} возвращает массив значений всех собственных перечисляемых свойств объекта.
 
 💡 **Важно:** В отличие от `Object.keys`, возвращает именно значения свойств, а не их имена.
 

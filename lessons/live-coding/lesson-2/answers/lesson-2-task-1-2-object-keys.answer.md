@@ -11,7 +11,7 @@ function getObjectKeys(obj) {
 ```
 
 **Пояснение:**
-[**Метод `Object.keys`**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries) возвращает массив строк — собственных перечисляемых ключей объекта.
+[**Метод `Object.keys`**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries){:data-glossary-term="Object.keys" data-glossary-definition="Возвращает массив ключей объекта"} возвращает массив строк — собственных перечисляемых ключей объекта.
 
 💡 **Важно:** Возвращает только собственные (не унаследованные) ключи объекта в том же порядке, в котором они были добавлены.
 
