@@ -14,11 +14,11 @@ title: Занятие 4
 ## Тема 1: CI/CD
 
 **Вопросы для обсуждения:**
-- Что такое [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd){:data-glossary-term="CI/CD" data-glossary-definition="Методология разработки, объединяющая непрерывную интеграцию и непрерывное развертывание" data-glossary-category="DevOps"} и зачем это нужно?
-- Какие основные **этапы** [**CI/CD pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline)?
+- Что такое [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd){:data-glossary-term="CI/CD" data-glossary-definition="Непрерывная интеграция и развертывание"} и зачем это нужно?
+- Какие основные **этапы** [**CI/CD pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline){:data-glossary-term="Pipeline" data-glossary-definition="Последовательность автоматизированных этапов"}?
 - Как **интегрировать автоматизацию тестирования** в [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd)?
 - Какие **инструменты** [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd) популярны сейчас?
-- Что такое [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions) и как настроить [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow)?
+- Что такое [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions){:data-glossary-term="GitHub Actions" data-glossary-definition="CI/CD платформа от GitHub"} и как настроить [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow){:data-glossary-term="Workflow" data-glossary-definition="Набор автоматизированных шагов"}?
 - Как создать [**pipeline для автоматического запуска тестов**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline)?
 
 **Ключевые концепции:**
@@ -34,7 +34,7 @@ title: Занятие 4
 ## Тема 2: Docker (Virtualization vs Containerization)
 
 **Вопросы для обсуждения:**
-- Что такое [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker) и зачем он нужен?
+- Что такое [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker){:data-glossary-term="Docker" data-glossary-definition="Платформа для контейнеризации"} и зачем он нужен?
 - В чём разница между [**виртуализацией** и **контейнеризацией**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация)?
 - Как **запускать тесты в** [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker)?
 - Какие **преимущества** даёт использование контейнеров?

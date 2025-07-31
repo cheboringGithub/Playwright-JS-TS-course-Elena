@@ -14,15 +14,15 @@ title: Занятие 3
 ## Тема 1: Framework Architecture (Multilayered)
 
 **Вопросы для обсуждения:**
-- Что такое [**фреймворк для автоматизированного тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#фреймворк-для-автоматизированного-тестирования){:data-glossary-term="Фреймворк тестирования" data-glossary-definition="Структурированная платформа для создания, выполнения и управления автоматизированными тестами" data-glossary-category="Тестирование"} (и в чем отличие от того, что называют фреймворком разработчики)?
-- Какие основные [**инструменты для автоматизации тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#инструменты-для-автоматизации-тестирования) существуют сейчас на рынке (их особенности и различия)?
+- Что такое [**фреймворк для автоматизированного тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#фреймворк-для-автоматизированного-тестирования){:data-glossary-term="Фреймворк тестирования" data-glossary-definition="Платформа для создания автоматизированных тестов"} (и в чем отличие от того, что называют фреймворком разработчики)?
+- Какие основные [**инструменты для автоматизации тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#инструменты-для-автоматизации-тестирования){:data-glossary-term="Инструменты тестирования" data-glossary-definition="Playwright, Selenium, Cypress и др."} существуют сейчас на рынке (их особенности и различия)?
 - Какие [**критерии выбора инструмента**]({{ site.baseurl }}/glossary/lesson-3-glossary#критерии-выбора-инструмента) существуют?
 - Из каких **слоев (уровней)** может состоять [**фреймворк**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура)?
 - Какие **паттерны** применяют для разных [**уровней абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в фреймворке и в особенности какие паттерны применяют для уровня бизнес-логики ([**PageObject**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern), [**PageElements**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-elements), [**Functional Helpers**]({{ site.baseurl }}/glossary/lesson-3-glossary#functional-helpers))?
 
 **Ключевые концепции:**
 - [**Многослойная архитектура**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) фреймворка
-- [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern) и его вариации
+- [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern){:data-glossary-term="Page Object Pattern" data-glossary-definition="Класс для страницы с ее элементами и методами"} и его вариации
 - [**Уровни абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в автоматизации тестирования
 
 ---
@@ -47,7 +47,7 @@ title: Занятие 3
 ## Тема 3: Fixtures
 
 **Вопросы для обсуждения:**
-- Что такое [**фикстуры**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры) и для чего они нужны в автоматизированном тестировании?
+- Что такое [**фикстуры**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры){:data-glossary-term="Фикстуры" data-glossary-definition="Подготовка данных для тестов (setup/teardown)"} и для чего они нужны в автоматизированном тестировании?
 - Какие **проблемы решают фикстуры** и как они улучшают качество тестов?
 - Как работают [**setup и teardown**]({{ site.baseurl }}/glossary/lesson-3-glossary#setup-и-teardown) в контексте фикстур?
 - Какие бывают типы [**фикстур в Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры) — **test fixtures**, **worker fixtures**, **auto fixtures** — и чем они отличаются друг от друга?

@@ -15,14 +15,14 @@ title: Занятие 2
 
 **Темы для изучения:**
 
-- **[Методы массивов](https://learn.javascript.ru/array-methods)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов){:data-glossary-term="Методы массивов" data-glossary-definition="Встроенные функции JavaScript для работы с массивами: map, filter, reduce, forEach и др." data-glossary-category="JavaScript"}
-- **[Перебираемые объекты](https://learn.javascript.ru/iterable)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#перебираемые-объекты-iterable)
-- **[Map и Set](https://learn.javascript.ru/map-set)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#map-и-set)
+- **[Методы массивов](https://learn.javascript.ru/array-methods)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов){:data-glossary-term="Методы массивов" data-glossary-definition="map, filter, reduce, forEach и др."}
+- **[Перебираемые объекты](https://learn.javascript.ru/iterable)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#перебираемые-объекты-iterable){:data-glossary-term="Перебираемые объекты" data-glossary-definition="Объекты для циклов for...of"}
+- **[Map и Set](https://learn.javascript.ru/map-set)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#map-и-set){:data-glossary-term="Map и Set" data-glossary-definition="Коллекции для ключ-значение и уникальных значений"}
 - **[Object.keys, values, entries](https://learn.javascript.ru/keys-values-entries)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries)
-- **[Деструктурирующее присваивание](https://learn.javascript.ru/destructuring-assignment)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание)
+- **[Деструктурирующее присваивание](https://learn.javascript.ru/destructuring-assignment)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание){:data-glossary-term="Деструктуризация" data-glossary-definition="Извлечение данных из массивов и объектов"}
 - **[Остаточные параметры и оператор расширения](https://learn.javascript.ru/rest-parameters-spread-operator)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#остаточные-параметры-rest-parameters)
 - **[Рекурсия и стек](https://learn.javascript.ru/recursion)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#рекурсия)
-- **[Замыкания](https://learn.javascript.ru/closure)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#замыкания-closures){:data-glossary-term="Замыкания" data-glossary-definition="Функция, которая имеет доступ к переменным из внешней области видимости даже после завершения внешней функции" data-glossary-category="JavaScript"}
+- **[Замыкания](https://learn.javascript.ru/closure)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#замыкания-closures){:data-glossary-term="Замыкания" data-glossary-definition="Доступ к переменным внешней области видимости"}
 - **[Устаревшее ключевое слово "var"](https://learn.javascript.ru/var)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#var-устаревшее-ключевое-слово)
 - **[Стрелочные функции](https://learn.javascript.ru/arrow-functions)** → [**Глоссарий**]({{ site.baseurl }}/glossary/lesson-2-glossary#стрелочные-функции)
 
