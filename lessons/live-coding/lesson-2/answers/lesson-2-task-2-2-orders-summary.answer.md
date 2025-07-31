@@ -21,4 +21,4 @@ function getOrdersSummary(orders) {
 - В результате получаем объект, где для каждого пользователя указана общая сумма его заказов.
 - Такой подход часто используется для агрегации данных по ключу.
 
-💡 **Техники:** [**reduce**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов) + [**деструктуризация**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание) для агрегации данных. 
+💡 **Техники:** [**reduce**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов){:data-glossary-term="reduce" data-glossary-definition="Агрегация данных массива"} + [**деструктуризация**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание){:data-glossary-term="Деструктуризация" data-glossary-definition="Извлечение значений из объектов"} для агрегации данных. 

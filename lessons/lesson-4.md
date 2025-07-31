@@ -22,8 +22,8 @@ title: Занятие 4
 - Как создать [**pipeline для автоматического запуска тестов**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline)?
 
 **Ключевые концепции:**
-- [**Continuous Integration**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-integration-ci) (CI)
-- [**Continuous Deployment**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-deployment-cd) (CD)
+- [**Continuous Integration**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-integration-ci){:data-glossary-term="Continuous Integration" data-glossary-definition="Непрерывная интеграция кода"} (CI)
+- [**Continuous Deployment**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-deployment-cd){:data-glossary-term="Continuous Deployment" data-glossary-definition="Непрерывное развертывание продукта"} (CD)
 - [**Pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline) и его этапы
 - **Интеграция тестов** в процесс разработки
 - [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions) и [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow)
@@ -41,7 +41,7 @@ title: Занятие 4
 
 **Ключевые концепции:**
 - [**Контейнеризация** vs **виртуализация**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация)
-- [**Dockerfile**]({{ site.baseurl }}/glossary/lesson-4-glossary#dockerfile) и [**Docker Compose**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker-compose)
+- [**Dockerfile**]({{ site.baseurl }}/glossary/lesson-4-glossary#dockerfile){:data-glossary-term="Dockerfile" data-glossary-definition="Файл с инструкциями для создания Docker-образа"} и [**Docker Compose**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker-compose){:data-glossary-term="Docker Compose" data-glossary-definition="Инструмент для управления многоконтейнерными приложениями"}
 - **Изоляция** окружения
 - **Портативность** приложений
 

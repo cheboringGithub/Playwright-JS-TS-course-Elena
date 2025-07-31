@@ -14,9 +14,9 @@ function processUsers(users) {
 ```
 
 **Пояснение:**
-1. [**filter**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов) — отбираем только пользователей 18 лет и старше
+1. [**filter**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов){:data-glossary-term="filter" data-glossary-definition="Отбор элементов по условию"} — отбираем только пользователей 18 лет и старше
 2. [**map с деструктуризацией**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание) — извлекаем нужные поля и добавляем isAdult
-3. [**sort**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов) — сортируем по возрасту (a.age - b.age для возрастания)
+3. [**sort**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов){:data-glossary-term="sort" data-glossary-definition="Сортировка элементов массива"} — сортируем по возрасту (a.age - b.age для возрастания)
 
 💡 **Техники:** Цепочка [**методов массивов**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов) с [**деструктуризацией**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание) в параметрах функции.
 

@@ -22,12 +22,12 @@ title: Занятие 1
 **Работа с [package.json]({{ site.baseurl }}/glossary/lesson-1-glossary#packagejson){:data-glossary-term="package.json" data-glossary-definition="Файл конфигурации Node.js проекта"}:**
 - Из каких блоков состоит [**package.json**]({{ site.baseurl }}/glossary/lesson-1-glossary#packagejson) и за что они отвечают
 - Блок script: для чего нужен, как используем
-- Блоки [**dependencies/devDependencies**]({{ site.baseurl }}/glossary/lesson-1-glossary#dependencies-vs-devdependencies) — для чего нужны и в чем отличия
+- Блоки [**dependencies/devDependencies**]({{ site.baseurl }}/glossary/lesson-1-glossary#dependencies-vs-devdependencies){:data-glossary-term="dependencies vs devDependencies" data-glossary-definition="Основные зависимости vs зависимости для разработки"} — для чего нужны и в чем отличия
 - Как установить зависимость в [**dependencies или devDependencies**]({{ site.baseurl }}/glossary/lesson-1-glossary#dependencies-vs-devdependencies)
-- Что такое [**package-lock.json**]({{ site.baseurl }}/glossary/lesson-1-glossary#package-lockjson), для чего используется, нужно ли добавлять его в .gitignore?
+- Что такое [**package-lock.json**]({{ site.baseurl }}/glossary/lesson-1-glossary#package-lockjson){:data-glossary-term="package-lock.json" data-glossary-definition="Файл блокировки версий зависимостей"}, для чего используется, нужно ли добавлять его в .gitignore?
 - Что такое [**семантическое версионирование**]({{ site.baseurl }}/glossary/lesson-1-glossary#семантическое-версионирование)? Что означают символы (^, ~, *)
 
-**[Yarn]({{ site.baseurl }}/glossary/lesson-1-glossary#yarn){:data-glossary-term="Yarn" data-glossary-definition="Альтернативный менеджер пакетов для Node.js" data-glossary-category="Инструменты"} — альтернатива NPM:**
+**[Yarn]({{ site.baseurl }}/glossary/lesson-1-glossary#yarn){:data-glossary-term="Yarn" data-glossary-definition="Альтернативный менеджер пакетов"} — альтернатива NPM:**
 - Что такое [**Yarn**]({{ site.baseurl }}/glossary/lesson-1-glossary#yarn)?
 - В чем основные отличия и сходства [**Yarn**]({{ site.baseurl }}/glossary/lesson-1-glossary#yarn) и [**NPM**]({{ site.baseurl }}/glossary/lesson-1-glossary#npm)?
 - Какие команды [**Yarn**]({{ site.baseurl }}/glossary/lesson-1-glossary#yarn) аналогичны npm install, npm run, npm ci?
@@ -43,8 +43,8 @@ title: Занятие 1
 ## Тема 2: GIT & GIT Flow
 
 **Вопросы для обсуждения:**
-- В целом для чего нужна [**система контроля версий**]({{ site.baseurl }}/glossary/lesson-1-glossary#git){:data-glossary-term="Git" data-glossary-definition="Распределенная система контроля версий" data-glossary-category="Инструменты"} и какие проблемы она решает
-- [**Команды**]({{ site.baseurl }}/glossary/lesson-1-glossary#основные-команды-git): `git clone`, `git pull`, `git push`, `git commit` — для чего нужны и когда применяем
+- В целом для чего нужна [**система контроля версий**]({{ site.baseurl }}/glossary/lesson-1-glossary#git){:data-glossary-term="Git" data-glossary-definition="Система контроля версий"} и какие проблемы она решает
+- [**Основные команды Git**]({{ site.baseurl }}/glossary/lesson-1-glossary#основные-команды-git){:data-glossary-term="Git команды" data-glossary-definition="clone, pull, push, commit - основные команды"}: `git clone`, `git pull`, `git push`, `git commit` — для чего нужны и когда применяем
 - Какие [**состояния**]({{ site.baseurl }}/glossary/lesson-1-glossary#состояния-файлов-в-git) бывают у файлов в [**git**]({{ site.baseurl }}/glossary/lesson-1-glossary#git)
 - [**`git config`**]({{ site.baseurl }}/glossary/lesson-1-glossary#git-config) — что это и для чего используем
 
@@ -52,7 +52,7 @@ title: Занятие 1
 - Флаг `--hard` (для `git fetch` или `git reset`)
 - Разница между [**git merge, rebase, cherry-pick**]({{ site.baseurl }}/glossary/lesson-1-glossary#git-операции) — когда какую команду применяем
 - [**git stash**]({{ site.baseurl }}/glossary/lesson-1-glossary#git-операции) — для чего нужен
-- [**.gitignore**]({{ site.baseurl }}/glossary/lesson-1-glossary#gitignore) — для чего нужен
+- [**.gitignore**]({{ site.baseurl }}/glossary/lesson-1-glossary#gitignore){:data-glossary-term=".gitignore" data-glossary-definition="Файл для игнорирования файлов в Git"} — для чего нужен
 - git log — как просматривать историю
 - Что такое [**Merge Request/Pull Request**]({{ site.baseurl }}/glossary/lesson-1-glossary#merge-request--pull-request), как происходит код-ревью
 

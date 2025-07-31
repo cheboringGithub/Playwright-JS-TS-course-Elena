@@ -16,7 +16,7 @@ title: Занятие 3
 **Вопросы для обсуждения:**
 - Что такое [**фреймворк для автоматизированного тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#фреймворк-для-автоматизированного-тестирования){:data-glossary-term="Фреймворк тестирования" data-glossary-definition="Платформа для создания автоматизированных тестов"} (и в чем отличие от того, что называют фреймворком разработчики)?
 - Какие основные [**инструменты для автоматизации тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#инструменты-для-автоматизации-тестирования){:data-glossary-term="Инструменты тестирования" data-glossary-definition="Playwright, Selenium, Cypress и др."} существуют сейчас на рынке (их особенности и различия)?
-- Какие [**критерии выбора инструмента**]({{ site.baseurl }}/glossary/lesson-3-glossary#критерии-выбора-инструмента) существуют?
+- Какие [**критерии выбора инструмента**]({{ site.baseurl }}/glossary/lesson-3-glossary#критерии-выбора-инструмента){:data-glossary-term="Критерии выбора" data-glossary-definition="Параметры для выбора фреймворка тестирования"} существуют?
 - Из каких **слоев (уровней)** может состоять [**фреймворк**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура)?
 - Какие **паттерны** применяют для разных [**уровней абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в фреймворке и в особенности какие паттерны применяют для уровня бизнес-логики ([**PageObject**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern), [**PageElements**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-elements), [**Functional Helpers**]({{ site.baseurl }}/glossary/lesson-3-glossary#functional-helpers))?
 
@@ -30,7 +30,7 @@ title: Занятие 3
 ## Тема 2: Loggers, Reporters
 
 **Вопросы для обсуждения:**
-- Что такое [**репортеры**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры) и для чего они нужны?
+- Что такое [**репортеры**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры){:data-glossary-term="Репортеры" data-glossary-definition="Модули для создания отчетов о тестах"} и для чего они нужны?
 - Какие существуют [**репортеры в Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры) и как они подключаются?
 - Как сделать [**кастомный репортер**]({{ site.baseurl }}/glossary/lesson-3-glossary#кастомный-репортер) и для чего он может быть полезен?
 
@@ -133,7 +133,7 @@ title: Занятие 3
 - [`page.fill`](https://playwright.dev/docs/api/class-page#page-fill) — ввод текста в поле
 - [`page.click`](https://playwright.dev/docs/api/class-page#page-click) — клик по элементу
 - [`page.locator`](https://playwright.dev/docs/api/class-page#page-locator) — поиск элементов ([**селекторы**]({{ site.baseurl }}/glossary/lesson-3-glossary#селектор))
-- [`expect`](https://playwright.dev/docs/api/class-expect) — проверки/[**assertions**]({{ site.baseurl }}/glossary/lesson-3-glossary#assertions)
+- [`expect`](https://playwright.dev/docs/api/class-expect) — проверки/[**assertions**]({{ site.baseurl }}/glossary/lesson-3-glossary#assertions){:data-glossary-term="Assertions" data-glossary-definition="Проверки ожидаемых результатов в тестах"}
 
 **Пример псевдокода для Playwright (TypeScript):**
 ```ts
