@@ -109,48 +109,19 @@ title: Глоссарий - Урок 3
 
 ## Page Object Pattern
 
-**Page Object Pattern** — паттерн проектирования, где каждая страница веб-приложения представлена отдельным классом, инкапсулирующим элементы и действия этой страницы.
+**Page Object Pattern** — паттерн проектирования, где каждая страница представлена отдельным классом с ее элементами и действиями.
 
-**Принципы:**
+**Зачем нужен:**
+- Убирает дублирование селекторов в тестах
+- Делает тесты более читаемыми и поддерживаемыми
+- Централизует логику работы со страницей в одном месте
+- Упрощает изменения — если селектор изменился, правим только в одном классе
+
+**Основные принципы:**
 - Один класс = одна страница
-- Инкапсуляция локаторов
-- Методы для действий пользователя
-- Возврат других Page Objects при навигации
-
-**Пример:**
-```javascript
-class LoginPage {
-  constructor(page) {
-    this.page = page;
-    // Локаторы
-    this.usernameInput = page.locator('#username');
-    this.passwordInput = page.locator('#password');
-    this.loginButton = page.locator('#login-btn');
-    this.errorMessage = page.locator('.error');
-  }
-
-  // Методы для действий
-  async login(username, password) {
-    await this.usernameInput.fill(username);
-    await this.passwordInput.fill(password);
-    await this.loginButton.click();
-    return new DashboardPage(this.page); // Возврат следующей страницы
-  }
-
-  async getErrorMessage() {
-    return await this.errorMessage.textContent();
-  }
-}
-
-// Использование в тесте
-test('login test', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  await page.goto('/login');
-  
-  const dashboardPage = await loginPage.login('user', 'pass');
-  await expect(dashboardPage.welcomeMessage).toBeVisible();
-});
-```
+- Селекторы хранятся внутри класса
+- Методы для действий пользователя (клики, заполнение форм)
+- Методы возвращают другие Page Objects при переходах между страницами
 
 ---
 
@@ -195,95 +166,39 @@ class LoginPage {
 
 ## Functional Helpers
 
-**Functional Helpers** — утилитарные функции, которые выполняют часто используемые операции в тестах.
+**Functional Helpers** — утилитарные функции для часто используемых операций в тестах.
 
-**Типы helpers:**
-- **API Helpers** — работа с API
-- **Database Helpers** — работа с БД
-- **File Helpers** — работа с файлами
-- **Wait Helpers** — ожидания
-- **Data Helpers** — генерация тестовых данных
+**Зачем нужны:**
+- Убирают дублирование кода между тестами
+- Централизуют общую логику (работу с API, генерацию данных)
+- Делают тесты более читаемыми и поддерживаемыми
+- Создают переиспользуемые компоненты
 
-**Пример:**
-```javascript
-// API Helper
-class ApiHelper {
-  static async createUser(userData) {
-    const response = await fetch('/api/users', {
-      method: 'POST',
-      body: JSON.stringify(userData)
-    });
-    return response.json();
-  }
-}
+**Основные типы:**
+- **API Helpers** — создание пользователей, работа с данными через API
+- **Data Helpers** — генерация тестовых данных (email, пароли, формы)
+- **Wait Helpers** — специальные ожидания и таймауты
+- **Database Helpers** — очистка и подготовка БД
+- **File Helpers** — работа с файлами и загрузками
 
-// Wait Helper
-class WaitHelper {
-  static async waitForElementToDisappear(page, selector, timeout = 5000) {
-    await page.waitForSelector(selector, { 
-      state: 'detached', 
-      timeout 
-    });
-  }
-}
-
-// Data Helper
-class DataHelper {
-  static generateRandomEmail() {
-    return `test${Date.now()}@example.com`;
-  }
-  
-  static generateUserData() {
-    return {
-      email: this.generateRandomEmail(),
-      password: 'TestPass123!',
-      firstName: 'Test',
-      lastName: 'User'
-    };
-  }
-}
-
-// Использование в тестах
-test('user registration', async ({ page }) => {
-  const userData = DataHelper.generateUserData();
-  await ApiHelper.createUser(userData);
-  
-  const loginPage = new LoginPage(page);
-  await loginPage.login(userData.email, userData.password);
-});
-```
+**Применение:** Вспомогательные функции, которые не относятся к конкретной странице, но нужны в разных тестах
 
 ---
 
 ## Уровни абстракции
 
-**Уровни абстракции** — различные слои абстракции в фреймворке, от низкоуровневых технических деталей до высокоуровневой бизнес-логики.
+**Уровни абстракции** — различные слои в фреймворке от технических деталей до бизнес-логики.
 
-**Уровни (снизу вверх):**
+**Зачем нужны уровни:**
+- Каждый уровень решает свою задачу и скрывает сложность нижележащих
+- Позволяют писать тесты на подходящем уровне сложности
+- Упрощают поддержку — изменения на одном уровне не затрагивают другие
 
-1. **Низкий уровень** — работа с драйверами
-```javascript
-// Прямая работа с WebDriver
-driver.findElement(By.id('username')).sendKeys('user');
-```
-
-2. **Средний уровень** — Page Objects
-```javascript
-// Методы страниц
-loginPage.enterUsername('user');
-```
-
-3. **Высокий уровень** — бизнес-операции
-```javascript
-// Бизнес-логика
-userWorkflow.loginAsStandardUser();
-```
-
-4. **Очень высокий уровень** — тестовые сценарии
-```javascript
-// Готовые сценарии
-testScenarios.completeUserRegistrationFlow();
-```
+**Основные уровни (снизу вверх):**
+1. **Драйвер** — прямая работа с браузером (`driver.click()`)
+2. **Page Objects** — методы страниц (`loginPage.enterUsername()`)
+3. **Бизнес-операции** — готовые флоу (`userFlow.loginAsAdmin()`)
+4. **Тестовые сценарии** — комплексные сценарии (`scenarios.completeRegistration()`)
 
 ---
 
@@ -317,92 +232,38 @@ export default {
 
 **Кастомный репортер** — собственная реализация репортера для специфических требований проекта.
 
-**Пример кастомного репортера:**
-```javascript
-class CustomReporter {
-  onBegin(config, suite) {
-    console.log(`Starting tests: ${suite.allTests().length} tests`);
-  }
+**Зачем нужен:**
+- Интеграция с корпоративными системами (Slack, Jira, базы данных)
+- Специфический формат отчетов для команды
+- Дополнительная обработка результатов тестов
+- Кастомная аналитика и метрики
 
-  onTestEnd(test, result) {
-    const status = result.status;
-    const duration = result.duration;
-    
-    console.log(`${test.title}: ${status} (${duration}ms)`);
-    
-    // Отправка в Slack при падении
-    if (status === 'failed') {
-      this.sendToSlack(test, result);
-    }
-  }
+**Основные методы репортера:**
+- `onBegin()` — старт выполнения тестов
+- `onTestEnd()` — завершение каждого теста  
+- `onEnd()` — завершение всех тестов
 
-  onEnd(result) {
-    console.log(`Tests finished: ${result.status}`);
-    
-    // Сохранение в базу данных
-    this.saveToDatabase(result);
-  }
-
-  async sendToSlack(test, result) {
-    // Логика отправки в Slack
-  }
-
-  async saveToDatabase(result) {
-    // Логика сохранения в БД
-  }
-}
-
-// Использование
-export default {
-  reporter: [['./custom-reporter.js']]
-};
-```
+**Применение:** Создание отчетов в нужном формате или отправка уведомлений
 
 ---
 
 ## Логирование
 
-**Логирование** — процесс записи информации о выполнении тестов для последующего анализа и отладки.
+**Логирование** — запись информации о выполнении тестов для анализа и отладки.
 
-**Уровни логирования:**
-- **ERROR** — ошибки
-- **WARN** — предупреждения  
-- **INFO** — информационные сообщения
-- **DEBUG** — детальная отладочная информация
+**Зачем нужно:**
+- Отладка падающих тестов — понять где и почему тест упал
+- Мониторинг выполнения — отслеживать прогресс долгих тестов
+- Анализ производительности — находить медленные операции
+- Аудит — запись всех действий для расследования
 
-**Пример:**
-```javascript
-class Logger {
-  static info(message) {
-    console.log(`[INFO] ${new Date().toISOString()}: ${message}`);
-  }
-  
-  static error(message, error) {
-    console.error(`[ERROR] ${new Date().toISOString()}: ${message}`, error);
-  }
-  
-  static debug(message) {
-    if (process.env.DEBUG) {
-      console.log(`[DEBUG] ${new Date().toISOString()}: ${message}`);
-    }
-  }
-}
+**Основные уровни:**
+- **ERROR** — критические ошибки, которые ломают тест
+- **WARN** — предупреждения о потенциальных проблемах  
+- **INFO** — общая информация о ходе выполнения
+- **DEBUG** — детальная техническая информация
 
-// Использование в тестах
-test('example test', async ({ page }) => {
-  Logger.info('Starting test execution');
-  
-  try {
-    await page.goto('/login');
-    Logger.debug('Navigated to login page');
-    
-    // ... тест
-  } catch (error) {
-    Logger.error('Test failed', error);
-    throw error;
-  }
-});
-```
+**Применение:** Добавление информативных сообщений в ключевых точках тестов
 
 ---
 
@@ -410,61 +271,18 @@ test('example test', async ({ page }) => {
 
 **Фикстуры** — механизм подготовки и очистки данных/состояния для тестов.
 
-**Типы фикстур в Playwright:**
+**Зачем нужны:**
+- Убирают дублирование подготовительного кода в тестах
+- Обеспечивают изоляцию — каждый тест получает "чистое" состояние
+- Автоматизируют setup и teardown
+- Позволяют переиспользовать подготовку данных между тестами
 
-**Test Fixtures** — выполняются для каждого теста
-```javascript
-const { test: base } = require('@playwright/test');
+**Типы фикстур:**
+- **Test Fixtures** — выполняются для каждого теста (создание пользователя, подготовка данных)
+- **Worker Fixtures** — выполняются один раз для группы тестов (подключение к БД, создание тестовой среды)
+- **Auto Fixtures** — выполняются автоматически без явного указания в тесте (логирование, мониторинг)
 
-const test = base.extend({
-  loggedInUser: async ({ page }, use) => {
-    // Setup
-    await page.goto('/login');
-    await page.fill('#username', 'testuser');
-    await page.fill('#password', 'password');
-    await page.click('#login');
-    
-    // Предоставить фикстуру тесту
-    await use(page);
-    
-    // Teardown
-    await page.click('#logout');
-  }
-});
-
-test('dashboard test', async ({ loggedInUser }) => {
-  // Тест выполняется с залогиненным пользователем
-  await expect(loggedInUser.locator('.dashboard')).toBeVisible();
-});
-```
-
-**Worker Fixtures** — выполняются один раз для группы тестов
-```javascript
-const test = base.extend({
-  database: [async ({}, use) => {
-    // Setup один раз для всех тестов
-    const db = await createTestDatabase();
-    await use(db);
-    
-    // Cleanup после всех тестов
-    await db.cleanup();
-  }, { scope: 'worker' }]
-});
-```
-
-**Auto Fixtures** — выполняются автоматически
-```javascript
-const test = base.extend({
-  logger: [async ({}, use) => {
-    const logger = new Logger();
-    logger.start();
-    
-    await use(logger);
-    
-    logger.stop();
-  }, { auto: true }] // автоматически для каждого теста
-});
-```
+**Принцип работы:** Setup → Использование в тесте → Teardown
 
 ---
 

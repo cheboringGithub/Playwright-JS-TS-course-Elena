@@ -56,7 +56,7 @@ title: Глоссарий курса
 - **CI/CD:** [CI/CD](lesson-4-glossary#cicd), [Continuous Integration](lesson-4-glossary#continuous-integration-ci), [Continuous Deployment](lesson-4-glossary#continuous-deployment-cd), [Pipeline](lesson-4-glossary#pipeline)
 - **GitHub Actions:** [GitHub Actions](lesson-4-glossary#github-actions), [Workflow](lesson-4-glossary#workflow)
 - **Контейнеризация:** [Docker](lesson-4-glossary#docker), [Контейнер](lesson-4-glossary#контейнер), [Docker образ](lesson-4-glossary#docker-образ), [Контейнеризация vs Виртуализация](lesson-4-glossary#контейнеризация-vs-виртуализация), [Dockerfile](lesson-4-glossary#dockerfile), [Docker Compose](lesson-4-glossary#docker-compose)
-- **Продвинутые паттерны:** [Page Object Pattern (расширенно)](lesson-4-glossary#page-object-pattern-расширенно), [Page Factory Pattern](lesson-4-glossary#page-factory-pattern), [Фикстуры (расширенно)](lesson-4-glossary#фикстуры-расширенно)
+- **Продвинутые паттерны:** [Page Object Pattern](lesson-4-glossary#page-object-pattern), [Page Factory Pattern](lesson-4-glossary#page-factory-pattern), [Фикстуры](lesson-4-glossary#фикстуры)
 - **Инфраструктура:** [Окружение](lesson-4-glossary#окружение), [Git push](lesson-4-glossary#git-push), [Git merge](lesson-4-glossary#git-merge)
 
 ---

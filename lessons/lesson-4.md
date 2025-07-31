@@ -42,7 +42,7 @@ title: Занятие 4
 > Отправляй на ревью после каждого задания, я аппрувлю и только потом делай следующее.
 
 ### Задание 1: Page Object Pattern
-Реализуй абстракции к тестам из занятия 3, применяя [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно).
+Реализуй абстракции к тестам из занятия 3, применяя [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern).
 
 **Задачи:**
 - Создание классов для страниц
@@ -109,7 +109,7 @@ test('test with factory', async ({ page }) => {
 ---
 
 ### Задание 3: Фикстуры с Page Factory
-Реализуй [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) для инициализации [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern).
+Реализуй [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры) для инициализации [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern).
 
 **Задачи:**
 - Фикстура с инициализацией PageFactory  
@@ -142,8 +142,8 @@ test('test with factory fixture', async ({ pageFactory }) => {
 ---
 
 **Итоговая архитектура:**
-- [**Page Objects**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно) — бизнес-логика страниц
+- [**Page Objects**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern) — бизнес-логика страниц
 - [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) — централизованное создание страниц  
-- [**Фикстуры**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) — управление жизненным циклом
+- [**Фикстуры**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры) — управление жизненным циклом
 
 Результат — полноценная [**многослойная архитектура**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) с четким разделением ответственности. 
