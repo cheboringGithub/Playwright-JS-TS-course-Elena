@@ -7,24 +7,26 @@ title: Занятие 4
 
 # Занятие 4
 
+📖 **[Глоссарий к уроку 4]({{ site.baseurl }}/glossary/lesson-4-glossary)** - все термины урока с подробными определениями и примерами
+
 ---
 
 ## Тема 1: CI/CD
 
 **Вопросы для обсуждения:**
-- Что такое **CI/CD** и зачем это нужно?
-- Какие основные **этапы CI/CD pipeline**?
-- Как **интегрировать автоматизацию тестирования** в CI/CD?
-- Какие **инструменты CI/CD** популярны сейчас?
-- Что такое **GitHub Actions** и как настроить workflow?
-- Как создать **pipeline для автоматического запуска тестов**?
+- Что такое [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd){:data-glossary-term="CI/CD" data-glossary-definition="Методология разработки, объединяющая непрерывную интеграцию и непрерывное развертывание" data-glossary-category="DevOps"} и зачем это нужно?
+- Какие основные **этапы** [**CI/CD pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline)?
+- Как **интегрировать автоматизацию тестирования** в [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd)?
+- Какие **инструменты** [**CI/CD**]({{ site.baseurl }}/glossary/lesson-4-glossary#cicd) популярны сейчас?
+- Что такое [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions) и как настроить [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow)?
+- Как создать [**pipeline для автоматического запуска тестов**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline)?
 
 **Ключевые концепции:**
-- **Continuous Integration** (CI)
-- **Continuous Deployment** (CD)
-- **Pipeline** и его этапы
+- [**Continuous Integration**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-integration-ci) (CI)
+- [**Continuous Deployment**]({{ site.baseurl }}/glossary/lesson-4-glossary#continuous-deployment-cd) (CD)
+- [**Pipeline**]({{ site.baseurl }}/glossary/lesson-4-glossary#pipeline) и его этапы
 - **Интеграция тестов** в процесс разработки
-- **GitHub Actions** и **workflow**
+- [**GitHub Actions**]({{ site.baseurl }}/glossary/lesson-4-glossary#github-actions) и [**workflow**]({{ site.baseurl }}/glossary/lesson-4-glossary#workflow)
 - **Автоматический запуск тестов** при push/merge
 
 ---
@@ -32,14 +34,14 @@ title: Занятие 4
 ## Тема 2: Docker (Virtualization vs Containerization)
 
 **Вопросы для обсуждения:**
-- Что такое **Docker** и зачем он нужен?
-- В чём разница между **виртуализацией** и **контейнеризацией**?
-- Как **запускать тесты в Docker**?
+- Что такое [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker) и зачем он нужен?
+- В чём разница между [**виртуализацией** и **контейнеризацией**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация)?
+- Как **запускать тесты в** [**Docker**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker)?
 - Какие **преимущества** даёт использование контейнеров?
 
 **Ключевые концепции:**
-- **Контейнеризация** vs **виртуализация**
-- **Dockerfile** и **Docker Compose**
+- [**Контейнеризация** vs **виртуализация**]({{ site.baseurl }}/glossary/lesson-4-glossary#контейнеризация-vs-виртуализация)
+- [**Dockerfile**]({{ site.baseurl }}/glossary/lesson-4-glossary#dockerfile) и [**Docker Compose**]({{ site.baseurl }}/glossary/lesson-4-glossary#docker-compose)
 - **Изоляция** окружения
 - **Портативность** приложений
 
@@ -55,7 +57,7 @@ title: Занятие 4
 > Отправляй на ревью после каждого задания, я аппрувлю и только потом делай следующее.
 
 ### Задание 1: Page Object Pattern
-Реализуй абстракции к тестам, сделанным в занятии 3, применяя **Page Object Pattern**.
+Реализуй абстракции к тестам, сделанным в занятии 3, применяя [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно).
 
 **Что нужно сделать:**
 - Создай классы для страниц
@@ -88,10 +90,10 @@ test('login test', async ({ page }) => {
 ---
 
 ### Задание 2: Page Factory Pattern
-Реализуй **Page Factory**, которая будет возвращать страницы в тестах.
+Реализуй [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern), которая будет возвращать страницы в тестах.
 
-**Что такое Page Factory:**
-Page Factory — это паттерн, который создаёт и возвращает объекты страниц. В Playwright это позволяет централизованно управлять созданием страниц и упростить тесты.
+**Что такое** [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern)**:**
+[**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) — это паттерн, который создаёт и возвращает объекты страниц. В [**Playwright**]({{ site.baseurl }}/glossary/lesson-2-glossary#playwright) это позволяет централизованно управлять созданием страниц и упростить тесты.
 
 **Что нужно сделать:**
 - Создай класс PageFactory
@@ -125,11 +127,11 @@ test('test with factory', async ({ page }) => {
 ---
 
 ### Задание 3: Фикстуры с Page Factory
-Реализуй фикстуру теста, из которой можно будет вызвать Page Factory.
+Реализуй [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) теста, из которой можно будет вызвать [**Page Factory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern).
 
 **Что нужно сделать:**
-- Создай фикстуру, которая инициализирует PageFactory с переданной страницей
-- Перепиши тесты так, чтобы они использовали фикстуру фабрики
+- Создай [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно), которая инициализирует [**PageFactory**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern) с переданной страницей
+- Перепиши тесты так, чтобы они использовали [**фикстуру**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно) фабрики
 
 **Пример структуры:**
 ```js
@@ -159,8 +161,8 @@ test('test with factory fixture', async ({ pageFactory }) => {
 
 **Результат:**
 Твои тесты должны иметь:
-- **Уровень абстракции** с бизнес-логикой (Page Objects)
-- **Фабрику**, которая возвращает страницы
-- **Фикстуру фабрики**, из которой можно получить любую страницу
+- [**Уровень абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) с бизнес-логикой ([**Page Objects**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-object-pattern-расширенно))
+- [**Фабрику**]({{ site.baseurl }}/glossary/lesson-4-glossary#page-factory-pattern), которая возвращает страницы
+- [**Фикстуру фабрики**]({{ site.baseurl }}/glossary/lesson-4-glossary#фикстуры-расширенно), из которой можно получить любую страницу
 
-Это создаст полноценную архитектуру автоматизации с правильным разделением ответственности. 
+Это создаст полноценную [**архитектуру автоматизации**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) с правильным разделением ответственности. 

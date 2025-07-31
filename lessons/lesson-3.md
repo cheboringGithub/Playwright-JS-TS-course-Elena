@@ -7,35 +7,37 @@ title: Занятие 3
 
 # Занятие 3
 
+📖 **[Глоссарий к уроку 3]({{ site.baseurl }}/glossary/lesson-3-glossary)** - все термины урока с подробными определениями и примерами
+
 ---
 
 ## Тема 1: Framework Architecture (Multilayered)
 
 **Вопросы для обсуждения:**
-- Что такое **фреймворк для автоматизированного тестирования** (и в чем отличие от того, что называют фреймворком разработчики)?
-- Какие основные **инструменты для автоматизации тестирования** существуют сейчас на рынке (их особенности и различия)?
-- Какие **критерии выбора инструмента** существуют?
-- Из каких **слоев (уровней)** может состоять фреймворк?
-- Какие **паттерны** применяют для разных уровней абстракции в фреймворке и в особенности какие паттерны применяют для уровня бизнес-логики (**PageObject**, **PageElements**, **Functional Helpers**)?
+- Что такое [**фреймворк для автоматизированного тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#фреймворк-для-автоматизированного-тестирования){:data-glossary-term="Фреймворк тестирования" data-glossary-definition="Структурированная платформа для создания, выполнения и управления автоматизированными тестами" data-glossary-category="Тестирование"} (и в чем отличие от того, что называют фреймворком разработчики)?
+- Какие основные [**инструменты для автоматизации тестирования**]({{ site.baseurl }}/glossary/lesson-3-glossary#инструменты-для-автоматизации-тестирования) существуют сейчас на рынке (их особенности и различия)?
+- Какие [**критерии выбора инструмента**]({{ site.baseurl }}/glossary/lesson-3-glossary#критерии-выбора-инструмента) существуют?
+- Из каких **слоев (уровней)** может состоять [**фреймворк**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура)?
+- Какие **паттерны** применяют для разных [**уровней абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в фреймворке и в особенности какие паттерны применяют для уровня бизнес-логики ([**PageObject**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern), [**PageElements**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-elements), [**Functional Helpers**]({{ site.baseurl }}/glossary/lesson-3-glossary#functional-helpers))?
 
 **Ключевые концепции:**
-- **Многослойная архитектура** фреймворка
-- **Page Object Pattern** и его вариации
-- **Уровни абстракции** в автоматизации тестирования
+- [**Многослойная архитектура**]({{ site.baseurl }}/glossary/lesson-3-glossary#многослойная-архитектура) фреймворка
+- [**Page Object Pattern**]({{ site.baseurl }}/glossary/lesson-3-glossary#page-object-pattern) и его вариации
+- [**Уровни абстракции**]({{ site.baseurl }}/glossary/lesson-3-glossary#уровни-абстракции) в автоматизации тестирования
 
 ---
 
 ## Тема 2: Loggers, Reporters
 
 **Вопросы для обсуждения:**
-- Что такое **репортеры** и для чего они нужны?
-- Какие существуют **репортеры в Playwright** и как они подключаются?
-- Как сделать **кастомный репортер** и для чего он может быть полезен?
+- Что такое [**репортеры**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры) и для чего они нужны?
+- Какие существуют [**репортеры в Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#репортеры) и как они подключаются?
+- Как сделать [**кастомный репортер**]({{ site.baseurl }}/glossary/lesson-3-glossary#кастомный-репортер) и для чего он может быть полезен?
 
 **Ключевые концепции:**
-- **Логирование** в автоматизированных тестах
+- [**Логирование**]({{ site.baseurl }}/glossary/lesson-3-glossary#логирование) в автоматизированных тестах
 - **Отчетность** и её важность
-- **Кастомизация** репортеров
+- [**Кастомизация**]({{ site.baseurl }}/glossary/lesson-3-glossary#кастомный-репортер) репортеров
 
 **Рекомендуемые материалы:**
 - [Документация Playwright по репортерам](https://playwright.dev/docs/test-reporters)
@@ -45,13 +47,13 @@ title: Занятие 3
 ## Тема 3: Fixtures
 
 **Вопросы для обсуждения:**
-- Что такое **фикстуры** и для чего они нужны в автоматизированном тестировании?
+- Что такое [**фикстуры**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры) и для чего они нужны в автоматизированном тестировании?
 - Какие **проблемы решают фикстуры** и как они улучшают качество тестов?
-- Как работают **setup и teardown** в контексте фикстур?
-- Какие бывают типы фикстур в Playwright — **test fixtures**, **worker fixtures**, **auto fixtures** — и чем они отличаются друг от друга?
+- Как работают [**setup и teardown**]({{ site.baseurl }}/glossary/lesson-3-glossary#setup-и-teardown) в контексте фикстур?
+- Какие бывают типы [**фикстур в Playwright**]({{ site.baseurl }}/glossary/lesson-3-glossary#фикстуры) — **test fixtures**, **worker fixtures**, **auto fixtures** — и чем они отличаются друг от друга?
 
 **Ключевые концепции:**
-- **Setup и Teardown** в тестах
+- [**Setup и Teardown**]({{ site.baseurl }}/glossary/lesson-3-glossary#setup-и-teardown) в тестах
 - **Переиспользование** кода между тестами
 - **Изоляция** тестовых данных
 
@@ -126,12 +128,12 @@ title: Занятие 3
 
 ---
 
-**Полезные методы Playwright:**
+**Полезные методы [Playwright]({{ site.baseurl }}/glossary/lesson-2-glossary#playwright):**
 - [`page.goto`](https://playwright.dev/docs/api/class-page#page-goto) — переход по URL
 - [`page.fill`](https://playwright.dev/docs/api/class-page#page-fill) — ввод текста в поле
 - [`page.click`](https://playwright.dev/docs/api/class-page#page-click) — клик по элементу
-- [`page.locator`](https://playwright.dev/docs/api/class-page#page-locator) — поиск элементов
-- [`expect`](https://playwright.dev/docs/api/class-expect) — проверки/assertions
+- [`page.locator`](https://playwright.dev/docs/api/class-page#page-locator) — поиск элементов ([**селекторы**]({{ site.baseurl }}/glossary/lesson-3-glossary#селектор))
+- [`expect`](https://playwright.dev/docs/api/class-expect) — проверки/[**assertions**]({{ site.baseurl }}/glossary/lesson-3-glossary#assertions)
 
 **Пример псевдокода для Playwright (TypeScript):**
 ```ts

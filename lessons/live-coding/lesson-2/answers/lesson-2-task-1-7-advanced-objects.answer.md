@@ -16,10 +16,12 @@ function analyzeData(data) {
 ```
 
 **Пояснение:**
-1. **Object.entries** — получаем массив пар [ключ, значение]
-2. **reduce** — накапливаем статистику, используя деструктуризацию `[key, value]`
+1. [**Object.entries**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries) — получаем массив пар [ключ, значение]
+2. [**reduce**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов) — накапливаем статистику, используя [**деструктуризацию**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание) `[key, value]`
 3. **Начальное значение** — объект с нулевыми значениями для count, sum, average
 4. **Обновление average** — пересчитываем среднее на каждой итерации
+
+💡 **Техники:** Использует [**Object.entries**]({{ site.baseurl }}/glossary/lesson-2-glossary#objectkeys-values-entries), [**reduce**]({{ site.baseurl }}/glossary/lesson-2-glossary#методы-массивов) и [**деструктуризацию массива**]({{ site.baseurl }}/glossary/lesson-2-glossary#деструктурирующее-присваивание).
 
 **Альтернативное решение с отдельным вычислением среднего:**
 ```js

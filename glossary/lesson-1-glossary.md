@@ -1,0 +1,298 @@
+---
+layout: default
+title: Глоссарий - Урок 1
+---
+
+<a href="{{ site.baseurl }}/lessons/lesson-1" class="main-link-home">← Назад к уроку 1</a>
+
+# Глоссарий - Урок 1
+
+---
+
+## Node.js
+
+**Node.js** — это среда выполнения JavaScript, построенная на движке V8 от Google Chrome. Позволяет выполнять JavaScript-код вне браузера.
+
+**Основные особенности:**
+- Асинхронная, неблокирующая модель I/O
+- Событийно-ориентированная архитектура
+- Использует JavaScript для серверной разработки
+
+**Пример использования:**
+```javascript
+// server.js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello from Node.js!');
+});
+
+server.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+```
+
+---
+
+## NPM
+
+**NPM (Node Package Manager)** — менеджер пакетов для Node.js, который позволяет устанавливать, обновлять и управлять зависимостями проекта.
+
+**Основные команды:**
+- `npm install` / `npm i` — установка зависимостей
+- `npm ci` — установка зависимостей из lock-файла (для CI/CD)
+- `npm run <script>` — запуск скрипта из package.json
+- `npm update` — обновление пакетов
+
+**Разница между `npm install` и `npm ci`:**
+- `npm install` — может изменить lock-файл
+- `npm ci` — устанавливает точные версии из lock-файла (быстрее, надежнее для CI)
+
+---
+
+## package.json
+
+**package.json** — конфигурационный файл проекта Node.js, содержащий метаданные о проекте и его зависимостях.
+
+**Основные блоки:**
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "Описание проекта",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
+```
+
+**Блок scripts:**
+Позволяет определить команды для автоматизации задач проекта.
+
+---
+
+## Dependencies vs DevDependencies
+
+**Dependencies** — пакеты, необходимые для работы приложения в production.
+
+**DevDependencies** — пакеты, нужные только во время разработки (тестирование, сборка, линтинг).
+
+**Установка:**
+```bash
+# В dependencies
+npm install express
+
+# В devDependencies  
+npm install --save-dev jest
+npm install -D webpack
+```
+
+---
+
+## package-lock.json
+
+**package-lock.json** — файл, который фиксирует точные версии всех зависимостей и их зависимостей.
+
+**Особенности:**
+- Гарантирует одинаковые версии пакетов во всех средах
+- Ускоряет установку пакетов
+- **НЕ должен** добавляться в .gitignore
+- Автоматически создается/обновляется при `npm install`
+
+---
+
+## Семантическое версионирование
+
+**Semantic Versioning (SemVer)** — система версионирования в формате `MAJOR.MINOR.PATCH`.
+
+**Формат:** `1.2.3`
+- **MAJOR** — несовместимые изменения API
+- **MINOR** — новая функциональность (обратно совместимая)
+- **PATCH** — исправления ошибок
+
+**Символы в package.json:**
+- `^1.2.3` — позволяет обновления до `<2.0.0`
+- `~1.2.3` — позволяет обновления до `<1.3.0`
+- `*` — любая версия
+- `1.2.3` — точная версия
+
+---
+
+## Yarn
+
+**Yarn** — альтернативный менеджер пакетов для Node.js, созданный Facebook.
+
+**Основные отличия от NPM:**
+- Быстрее установка пакетов
+- Детерминистическая установка
+- Offline режим
+- Workspaces для монорепозиториев
+
+**Аналогичные команды:**
+```bash
+# NPM -> Yarn
+npm install -> yarn / yarn install
+npm run script -> yarn script
+npm ci -> yarn install --frozen-lockfile
+```
+
+**Нельзя использовать Yarn и NPM в одном проекте** — это может привести к конфликтам lock-файлов.
+
+---
+
+## yarn.lock
+
+**yarn.lock** — lock-файл Yarn, аналог package-lock.json.
+
+**Отличия от package-lock.json:**
+- Более читаемый формат
+- Другая структура записи зависимостей
+- Создается и обновляется командами Yarn
+
+---
+
+## Git
+
+**Git** — распределенная система контроля версий для отслеживания изменений в файлах и координации работы над проектом.
+
+**Основные проблемы, которые решает:**
+- Отслеживание истории изменений
+- Работа в команде над одним проектом
+- Откат к предыдущим версиям
+- Ветвление и слияние кода
+
+---
+
+## Основные команды Git
+
+**git clone** — создание локальной копии удаленного репозитория
+```bash
+git clone https://github.com/user/repo.git
+```
+
+**git pull** — получение и слияние изменений с удаленного репозитория
+```bash
+git pull origin main
+```
+
+**git push** — отправка локальных изменений на удаленный репозиторий
+```bash
+git push origin feature-branch
+```
+
+**git commit** — сохранение изменений в локальном репозитории
+```bash
+git add .
+git commit -m "Add new feature"
+```
+
+---
+
+## Состояния файлов в Git
+
+1. **Untracked** — файл не отслеживается Git
+2. **Staged** — файл добавлен в индекс (`git add`)
+3. **Committed** — изменения сохранены в репозитории (`git commit`)
+4. **Modified** — файл изменен, но не добавлен в индекс
+
+---
+
+## git config
+
+**git config** — настройка конфигурации Git.
+
+**Основные настройки:**
+```bash
+# Глобальные настройки пользователя
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Настройки для текущего репозитория
+git config user.name "Project Name"
+```
+
+---
+
+## Git операции
+
+**git merge** — слияние веток
+```bash
+git merge feature-branch
+```
+
+**git rebase** — перебазирование (перенос коммитов на другую базу)
+```bash
+git rebase main
+```
+
+**git cherry-pick** — применение конкретного коммита
+```bash
+git cherry-pick abc123
+```
+
+**git stash** — временное сохранение незавершенных изменений
+```bash
+git stash
+git stash pop
+```
+
+---
+
+## .gitignore
+
+**gitignore** — файл, указывающий Git какие файлы и папки не нужно отслеживать.
+
+**Пример:**
+```
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+```
+
+---
+
+## Merge Request / Pull Request
+
+**Merge Request (GitLab) / Pull Request (GitHub)** — механизм для предложения изменений в основную ветку проекта.
+
+**Процесс код-ревью:**
+1. Создание ветки для изменений
+2. Внесение изменений и коммитов
+3. Создание MR/PR
+4. Ревью кода коллегами
+5. Внесение правок (при необходимости)
+6. Слияние с основной веткой
+
+---
+
+## Git Flow
+
+**Git Flow** — методология работы с ветками в Git проекте.
+
+**Основные типы веток:**
+- **main/master** — основная ветка с продакшн кодом
+- **develop** — ветка разработки
+- **feature/** — ветки для новых функций
+- **release/** — ветки для подготовки релизов
+- **hotfix/** — ветки для срочных исправлений
+
+**Популярные стратегии:**
+- GitHub Flow
+- Git Flow
+- GitLab Flow
+
+---
+
+<a href="{{ site.baseurl }}/glossary" class="main-link-home">← К общему глоссарию</a>

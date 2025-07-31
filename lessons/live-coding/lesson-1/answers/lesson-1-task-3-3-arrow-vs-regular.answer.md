@@ -29,5 +29,7 @@ Hi, I'm Elena
 ```
 
 **Пояснение:**
-- В стрелочной функции `this` берётся из внешнего контекста (глобальный объект), поэтому `this.name` — undefined.
-- В обычной функции `this` ссылается на сам объект `user`, поэтому `this.name` — "Elena". 
+- В [**стрелочной функции**]({{ site.baseurl }}/glossary/lesson-2-glossary#стрелочные-функции){:data-glossary-term="Стрелочные функции" data-glossary-definition="Краткий синтаксис функций ES6, которые не имеют собственного this и наследуют его из внешней области" data-glossary-category="JavaScript"} `this` берётся из внешнего контекста (глобальный объект), поэтому `this.name` — undefined.
+- В [**обычной функции**]({{ site.baseurl }}/glossary/lesson-2-glossary#стрелочные-функции) `this` ссылается на сам объект `user`, поэтому `this.name` — "Elena".
+
+📖 **[Подробнее о стрелочных функциях и this]({{ site.baseurl }}/glossary/lesson-2-glossary#стрелочные-функции)** 
