@@ -10,7 +10,7 @@ title: Главная
 
 ## <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo" style="height:1em;vertical-align:middle;"> [Тестовый проект](https://github.com/elorish/auto_elo)
 
-[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md) | [Занятие 3](lessons/lesson-3.md)
+[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md) | [Занятие 3](lessons/lesson-3.md) | [Занятие 4](lessons/lesson-4.md)
 
 ---
 

@@ -28,8 +28,8 @@
 
 ### Занятие 4
 **Теория:**
-- CI/CD
-- Docker (Virtualization vs Containerization)
+- Тема 1: CI/CD
+- Тема 2: Docker (Virtualization vs Containerization)
 
 ---
 

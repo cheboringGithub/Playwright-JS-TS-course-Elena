@@ -59,7 +59,7 @@ title: Занятие 1
 
 **Рекомендуемые материалы:**
 - [Pro Git — всё о гите от простого к сложному](https://git-scm.com/book/ru/v2)
-- [Видео с практикой](https://www.youtube.com/watch?v=zZBiln_2FhM)
+- [Видео с практикой](https://www.youtube.com/watch?v=zZBiln_2FhM) 
 
 ---
 
