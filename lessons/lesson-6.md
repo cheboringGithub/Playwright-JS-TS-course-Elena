@@ -259,8 +259,6 @@ title: Занятие 6
 
 ---
 
-## 🚀 Практическая часть
-
 ## 📚 Полезные источники
 
 ### 📖 **Теоретические материалы**
@@ -272,6 +270,8 @@ title: Занятие 6
 - **[SOLID принципы в JavaScript](https://www.youtube.com/watch?v=xq13wiqvcTc) — подробный разбор всех пяти принципов SOLID с практическими примерами**
 
 ---
+
+## 🚀 Практическая часть
 
 **Перед началом:**
 - Создай ветку `task-6`.
@@ -305,95 +305,3 @@ title: Занятие 6
 - Измерить время выполнения с 2, 4 и 8 шардами
 - Проанализировать распределение тестов между шардами
 ---
-
-## 💻 Примеры конфигурации
-
-### Конфигурация Playwright для Sharding
-```typescript
-// playwright.config.ts
-export default defineConfig({
-  testDir: './tests',
-  // Включаем blob репортер для CI
-  reporter: process.env.CI ? 'blob' : 'html',
-  // Включаем полностью параллельное выполнение для лучшего sharding
-  fullyParallel: true,
-  // Настройки параллелизма
-  workers: process.env.CI ? 1 : undefined,
-});
-```
-
-### GitHub Actions Workflow с Sharding
-```yaml
-# .github/workflows/playwright-sharded.yml
-name: Playwright Tests with Sharding
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-
-jobs:
-  playwright-tests:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shardIndex: [1, 2, 3, 4]
-        shardTotal: [4]
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
-    - name: Upload blob report
-      if: ${{ !cancelled() }}
-      uses: actions/upload-artifact@v4
-      with:
-        name: blob-report-${{ matrix.shardIndex }}
-        path: blob-report
-        retention-days: 1
-
-  merge-reports:
-    if: ${{ !cancelled() }}
-    needs: [playwright-tests]
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Download blob reports
-      uses: actions/download-artifact@v4
-      with:
-        path: all-blob-reports
-        pattern: blob-report-*
-        merge-multiple: true
-    - name: Merge into HTML Report
-      run: npx playwright merge-reports --reporter html ./all-blob-reports
-    - name: Upload HTML report
-      uses: actions/upload-artifact@v4
-      with:
-        name: html-report
-        path: playwright-report
-        retention-days: 14
-```
-
----
-
-## 💻 Live Coding
-
-[Перейти к задачам для практики (Live Coding)]({{ site.baseurl }}/lessons/live-coding/lesson-6/live-coding-lesson-6)
-
-**Практические задачи по:**
-- **ООП в JavaScript** - прототипы, классы, наследование
-- **SOLID принципы** - применение в реальном коде
-- **JavaScript vs TypeScript** - сравнение и миграция
