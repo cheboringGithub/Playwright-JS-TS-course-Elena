@@ -88,6 +88,12 @@ title: Занятие 5
 
 ---
 
+## 💻 Live Coding
+
+[Перейти к задачам для практики (Live Coding)]({{ site.baseurl }}/lessons/live-coding/lesson-5/live-coding-lesson-5)
+
+---
+
 ## 🚀 Практическая часть
 
 **Перед началом:**
@@ -122,12 +128,3 @@ title: Занятие 5
 
 
 ---
-
-## 💻 Live Coding
-
-[Перейти к задачам для практики (Live Coding)]({{ site.baseurl }}/lessons/live-coding/lesson-5/live-coding-lesson-5)
-
-**6 практических задач по асинхронности:**
-- **Колбэки** - понимание Event Loop и порядка выполнения
-- **Promise** - состояния, методы, цепочки
-- **Async/Await** - синтаксис, обработка ошибок, практическое применение
