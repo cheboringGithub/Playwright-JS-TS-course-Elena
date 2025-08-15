@@ -11,8 +11,8 @@ title: Практика Live Coding (Lesson 5)
 Решайте задачи онлайн в песочнице:
 
 ## 🔄 Колбэки (Callbacks)
-- [Задача 1.1: **Callback Hell** (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-5%2Ftasks%2Flesson-5-task-1-1-callback-hell.js) → [Что такое колбэки?]({{ site.baseurl }}/glossary/lesson-5-glossary#колбэк-callback)
-- [Задача 1.2: **Порядок выполнения** (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-5%2Ftasks%2Flesson-5-task-1-2-execution-order.js) → [Event Loop]({{ site.baseurl }}/glossary/lesson-5-glossary#event-loop)
+- [Задача 1.1: **Event Loop и порядок выполнения** (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-5%2Ftasks%2Flesson-5-task-1-1-execution-order.js) → [Event Loop]({{ site.baseurl }}/glossary/lesson-5-glossary#event-loop)
+- [Задача 1.2: **Callback Hell** (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-5%2Ftasks%2Flesson-5-task-1-2-callback-hell.js) → [Что такое колбэки?]({{ site.baseurl }}/glossary/lesson-5-glossary#колбэк-callback)
 
 ## ⚡ Promise
 - [Задача 2.1: **Promise состояния** (CodeSandbox)](https://codesandbox.io/p/github/cheboringGithub/Playwright-JS-TS-course-Elena/main?file=%2Flessons%2Flive-coding%2Flesson-5%2Ftasks%2Flesson-5-task-2-1-promise-states.js) → [Что такое Promise?]({{ site.baseurl }}/glossary/lesson-5-glossary#promise)
@@ -25,8 +25,8 @@ title: Практика Live Coding (Lesson 5)
 ## 📝 Ответы на задачи:
 
 ### 🔄 Колбэки
-- [Ответ к задаче 1.1: Callback Hell](answers/lesson-5-task-1-1-callback-hell.answer.md)
-- [Ответ к задаче 1.2: Порядок выполнения](answers/lesson-5-task-1-2-execution-order.answer.md)
+- [Ответ к задаче 1.1: Event Loop и порядок выполнения](answers/lesson-5-task-1-1-execution-order.answer.md)
+- [Ответ к задаче 1.2: Callback Hell](answers/lesson-5-task-1-2-callback-hell.answer.md)
 
 ### ⚡ Promise
 - [Ответ к задаче 2.1: Promise состояния](answers/lesson-5-task-2-1-promise-states.answer.md)
