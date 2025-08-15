@@ -61,10 +61,32 @@ title: Глоссарий курса
 
 ---
 
+### [Урок 5: Асинхронность в JavaScript](lesson-5-glossary)
+**Работа с асинхронными операциями**
+
+- **Основы асинхронности:** [Асинхронность](lesson-5-glossary#асинхронность), [Event Loop](lesson-5-glossary#event-loop)
+- **Способы работы:** [Колбэк (Callback)](lesson-5-glossary#колбэк-callback), [Promise](lesson-5-glossary#promise), [Async/Await](lesson-5-glossary#async-await)
+- **Управление временем:** [Таймаут (Timeout)](lesson-5-glossary#таймаут-timeout), [Retry (Повтор)](lesson-5-glossary#retry-повтор)
+
+---
+
+### [Урок 6: Оптимизация тестов с помощью Sharding](lesson-6-glossary)
+**Параллельное выполнение и оптимизация**
+
+- **Основы sharding:** [Sharding](lesson-6-glossary#sharding), [Уровни гранулярности](lesson-6-glossary#уровни-гранулярности)
+- **Оптимизация:** [Балансировка шардов](lesson-6-glossary#балансировка-шардов), [Matrix Strategy](lesson-6-glossary#matrix-strategy)
+- **Отчетность:** [Blob Reporter](lesson-6-glossary#blob-reporter), [Объединение отчетов](lesson-6-glossary#объединение-отчетов)
+
+---
+
 ## 🔍 Алфавитный указатель
 
 ### A-C
+- [Асинхронность](lesson-5-glossary#асинхронность) — способ выполнения операций без блокировки основного потока
 - [Assertions](lesson-3-glossary#assertions) — проверки в тестах
+- [Async/Await](lesson-5-glossary#async-await) — синтаксис для работы с асинхронным кодом
+- [Балансировка шардов](lesson-6-glossary#балансировка-шардов) — равномерное распределение тестов между шардами
+- [Blob Reporter](lesson-6-glossary#blob-reporter) — специальный репортер для объединения отчетов
 - [CI/CD](lesson-4-glossary#cicd) — непрерывная интеграция и развертывание
 - [Continuous Integration](lesson-4-glossary#continuous-integration-ci) — непрерывная интеграция
 - [Continuous Deployment](lesson-4-glossary#continuous-deployment-cd) — непрерывное развертывание
@@ -76,6 +98,7 @@ title: Глоссарий курса
 - [Dockerfile](lesson-4-glossary#dockerfile) — файл инструкций для Docker
 - [Docker Compose](lesson-4-glossary#docker-compose) — оркестрация контейнеров
 - [E2E тестирование](lesson-2-glossary#e2e-тестирование) — End-to-End тестирование пользовательских сценариев
+- [Event Loop](lesson-5-glossary#event-loop) — механизм координации синхронного и асинхронного кода
 - [Functional Helpers](lesson-3-glossary#functional-helpers) — вспомогательные функции
 - [Git](lesson-1-glossary#git) — система контроля версий
 - [Git Flow](lesson-1-glossary#git-flow) — методология работы с ветками
@@ -87,17 +110,21 @@ title: Глоссарий курса
 
 ### H-O
 - [Hoisting](lesson-2-glossary#hoisting) — подъем объявлений переменных и функций
-- [Контейнер](lesson-4-glossary#контейнер) — изолированная среда выполнения приложения
 - [Код-ревью](lesson-1-glossary#код-ревью) — процесс проверки кода коллегами
+- [Колбэк (Callback)](lesson-5-glossary#колбэк-callback) — функция, выполняемая после завершения операции
+- [Контейнер](lesson-4-glossary#контейнер) — изолированная среда выполнения приложения
 - [npm i vs npm ci](lesson-1-glossary#npm-i-vs-npm-ci) — различия команд установки зависимостей
 - [Окружение](lesson-4-glossary#окружение) — среда выполнения приложения
 
 ### M-P
 - [Map и Set](lesson-2-glossary#map-и-set) — коллекции в JavaScript
+- [Matrix Strategy](lesson-6-glossary#matrix-strategy) — стратегия GitHub Actions для параллельных jobs
 - [Merge Request/Pull Request](lesson-1-glossary#merge-request--pull-request) — механизм код-ревью
 - [Node.js](lesson-1-glossary#nodejs) — среда выполнения JavaScript
 - [NPM](lesson-1-glossary#npm) — менеджер пакетов Node.js
 - [Object.keys, values, entries](lesson-2-glossary#objectkeys-values-entries) — методы работы с объектами
+- [Объединение отчетов](lesson-6-glossary#объединение-отчетов) — создание единого отчета из результатов всех шардов
+- [Promise](lesson-5-glossary#promise) — объект для работы с асинхронными операциями
 - [package.json](lesson-1-glossary#packagejson) — конфигурационный файл проекта
 - [package-lock.json](lesson-1-glossary#package-lockjson) — файл блокировки версий
 - [Page Object Pattern](lesson-3-glossary#page-object-pattern) — паттерн для организации тестов
@@ -110,12 +137,16 @@ title: Глоссарий курса
 ### R-Z
 - [Рекурсия](lesson-2-glossary#рекурсия) — техника программирования
 - [Репортеры](lesson-3-glossary#репортеры) — инструменты отчетности
+- [Retry (Повтор)](lesson-5-glossary#retry-повтор) — механизм повторного выполнения операций
 - [Селектор](lesson-3-glossary#селектор) — способ идентификации элементов
 - [Семантическое версионирование](lesson-1-glossary#семантическое-версионирование) — система версий
 - [Setup и Teardown](lesson-3-glossary#setup-и-teardown) — подготовка и очистка тестов
+- [Sharding](lesson-6-glossary#sharding) — разделение тестов на параллельные части
 - [Стрелочные функции](lesson-2-glossary#стрелочные-функции) — краткий синтаксис функций
+- [Таймаут (Timeout)](lesson-5-glossary#таймаут-timeout) — максимальное время ожидания операции
 - [TypeScript](lesson-3-glossary#typescript) — типизированный язык от Microsoft
 - [URL](lesson-3-glossary#url) — универсальный указатель ресурса
+- [Уровни гранулярности](lesson-6-glossary#уровни-гранулярности) — способы разделения тестов при sharding
 - [Фикстуры](lesson-3-glossary#фикстуры) — управление состоянием тестов
 - [Фреймворк для автоматизированного тестирования](lesson-3-glossary#фреймворк-для-автоматизированного-тестирования) — платформа для тестов
 - [Workflow](lesson-4-glossary#workflow) — автоматизированный процесс

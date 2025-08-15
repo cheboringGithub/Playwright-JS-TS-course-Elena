@@ -12,7 +12,7 @@ title: Главная
 
 ## 📖 [Глоссарий терминов](glossary/)
 
-[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md) | [Занятие 3](lessons/lesson-3.md) | [Занятие 4](lessons/lesson-4.md)
+[Область знаний](knowledge-scope.md) | [Занятие 1](lessons/lesson-1.md) | [Занятие 2](lessons/lesson-2.md) | [Занятие 3](lessons/lesson-3.md) | [Занятие 4](lessons/lesson-4.md) | [Занятие 5](lessons/lesson-5.md) | [Занятие 6](lessons/lesson-6.md)
 
 ---
 
@@ -46,7 +46,22 @@ title: Главная
 ---
 
 ### Занятие 5
-**Тема:** API Testing
+**Теория:**
+- Асинхронность в JavaScript
+- Колбэки, Promise, Async/Await
+- Event Loop
+
+**Практика:** Создание GitHub Actions pipelines для автоматизации тестов
+
+---
+
+### Занятие 6
+**Теория:**
+- Sharding в Playwright
+- Уровни гранулярности и балансировка шардов
+- Объединение отчетов и blob репортер
+
+**Практика:** Оптимизация тестов с помощью sharding и анализ производительности
 
 ---
 
